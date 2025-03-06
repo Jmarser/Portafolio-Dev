@@ -1,195 +1,161 @@
+/* Controlador del desplegable del menú */
+const menuBtn = document.getElementById("menu-btn");
+const navLinks = document.getElementById("nav-links");
+const menuBtnIcon = menuBtn.querySelector("i");
 
-/*= SHOW SIDEBAR =*/
-const navMenu = document.getElementById("sidebar");
-const navToggle = document.getElementById("nav-toggle");
-const navClose = document.getElementById("nav-close");
+menuBtn.addEventListener("click", (e) =>{
+    navLinks.classList.toggle("open");
 
-/*= SIDEBAR SHOW =*/
-/*= validar que existe la constante =*/
-if(navToggle){
-    navToggle.addEventListener("click", () => {
-        navMenu.classList.add('sidebar--show');
-    });
-}
-
-/*= SIDEBAR HIDDE =*/
-/*= validar que existe la constante =*/
-if(navClose){
-    navClose.addEventListener("click", () => {
-        navMenu.classList.remove('sidebar--show');
-    });
-}
-
-const btnShare = document.getElementById("btnShare");
-
-
-/* Funciones */
-
-//función para dar la funcionalidad del boton de compartir
-const compartir = () => {
-    navigator.share({
-        title: 'Portfolio Jmarser',
-        text: 'Mira que portafolio',
-        url: '###Dirección del portafolio',
-    });
-}
-
-/* ANIMAR ESCRITURA */
-
-/* El primer parámetro es la clase que queremos modificar. */
-let typed = new Typed(".typing", {
-    strings: [ //texto que queremos que escriba
-        "Desarrollador front-end",
-        "Desarrollador back-end",
-        "Desarrollador android",
-    ],
-    typeSpeed: 75, //velocidad en milisegundos para poner una letra
-    startDelay: 300, //Tiempo de retraso en iniciar la animación
-    backSpeed: 75, //velocidad en milisegundos en borrar una letra
-    smartBackspace: true, //elimina solamente las palabras que sean nuevas en una cadena
-    shuffle: false, //alterar el orden en el que se escriben las palabras
-    backDelay: 1500, //tiempo de espera despues de que termina de escribir una palabra
-    loop: true, // escribir en bucle
-    loopount: false, // cantidad de veces en repetir el array, en este caso infinito
-    showCursor: true, //mostrar el cursor 
-    cursorChar: "|", //caracter para el cursor
-    autoInsertCss: true, //permite estilos en el cursor con la clase .typed-cursor
+    const isOpen = navLinks.classList.contains("open")
+    menuBtnIcon.setAttribute("class", isOpen ? "ri-close-line" : "ri-menu-line");
 });
 
-/*= MIXITUP FILTER PORTFOLIO =*/
-let mixer = mixitup('.portfolio__container', {
-    selectors: {
-        target: '.portfolio__card'
-    },
-    animation: {
-        duration: 300
-    }
+navLinks.addEventListener("click", (e) =>{
+    navLinks.classList.remove("open");
+    menuBtnIcon.setAttribute("class", "ri-menu-line");
 });
 
-/*= link active work =*/
-const linkPortfolio = document.querySelectorAll('.portfolio__item');
+/* descarga de pdf */
+const downloadCv = document.getElementById("download-cv");
 
-function activePortfolio(){
-    linkPortfolio.forEach(l => l.classList.remove('active-portfolio'));
-    this.classList.add('active-portfolio');
-}
-
-function togglePortfolioPopup(){
-    document.querySelector(".portfolio__popup").classList.toggle("open");
-}
-
-function portfolioItemDetails(portfolioItem){
-    //console.log(portfolioItem);
-    document.querySelector(".portfolio__thumbnail img").src = portfolioItem.querySelector(".portfolio__img").src;
-    document.querySelector(".portfolio__popup-subtitle span").innerHTML = portfolioItem.querySelector(".portfolio__title").innerHTML;
-    document.querySelector(".portfolio__popup-body").innerHTML = portfolioItem.querySelector(".portfolio__item-details").innerHTML;
-}
-
-/*= SERVICES MODAL =*/
-const modalVista = document.querySelectorAll('.services__modal');
-const modelsBtn =  document.querySelectorAll('.services__button');
-const modalCloses = document.querySelectorAll('.services__modal-close');
-
-let modal = function(modalClick){
-    modalVista[modalClick].classList.add('active-modal');
-}
-
-modelsBtn.forEach((modelBtn, i) => {
-    modelBtn.addEventListener("click", () => {
-        modal(i);
-    });
+downloadCv.addEventListener("click", (e) => {
+    const aElement = document.createElement("a");
+    aElement.setAttribute("download", "CV.pdf");
+    aElement.setAttribute("href", "../download/CV Developer 2022.pdf");
+    aElement.click();
 });
 
-modalCloses.forEach((close) => {
-    close.addEventListener("click", () => {
-        modalVista.forEach((vista) => {
-            vista.classList.remove('active-modal');
-        });
-    });
-});
+/* Efectos scrollreveal */
+const scrollRevealOption = {
+    distance: "50px",
+    origin: "bottom",
+    duration: 1000,
+};
 
-
-/*= SWIPER TESTIMONIAL =*/
-let swiper = new Swiper(".testimonials__container", {
-    spaceBetween: 24,
-    loop: true,
-    grabCursor: true,
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-    breakpoints: {
-        576: {
-            slidesPerView: 2,
-        },
-        768: {
-            slidesPerView: 2,
-            spaceBetween: 48,
-        },
-
-    },
-});
-
-/*= Input animacion =*/
-const inputs = document.querySelectorAll(".input");
-
-function focusFunc(){
-    let parent = this.parentNode;
-    parent.classList.add("focus");
+const scrollRevealOptionWeb = {
+    distance: "50px",
+    origin: "left",
+    duration: 1000,
 }
 
-function blurFunc(){
-    let parent = this.parentNode;
-    if(this.value == ""){
-        parent.classList.remove("focus");
-    }
+const scrollRevealOptionMovil = {
+    distance: "50px",
+    origin: "right",
+    duration: 1000,
 }
 
-inputs.forEach((input) => {
-    input.addEventListener("focus", focusFunc);
-    input.addEventListener("blur", blurFunc);
+ScrollReveal().reveal(".header__container h4", {
+    ...scrollRevealOption,
 });
 
-/*= Scroll section active link =*/
+ScrollReveal().reveal(".header__container h1", {
+    ...scrollRevealOption,
+    delay: 500,
+});
 
-//tomamos todas las secciones que tengan definido id
-const sections = document.querySelectorAll("section[id]");
+ScrollReveal().reveal(".header__container .section__description", {
+    ...scrollRevealOption,
+    delay: 1000,
+});
 
-//agregamos un evento a la ventana
-window.addEventListener("scroll", () => {
+ScrollReveal().reveal(".header__container .header__btns", {
+    ...scrollRevealOption,
+    delay: 1500,
+});
 
-    //tomamos la posicion del scroll
-    let scrollY = window.pageYOffset;
+ScrollReveal().reveal(".about__image__web", {
+    ...scrollRevealOptionWeb,
+});
 
-    //realizamos un bucle por las secciones y tomamos su altura, donde empieza y su id
-    sections.forEach(current => {
-        const sectionHeight = current.offsetHeight;
-        const sectionTop = current.offsetTop - 50;
-        const sectionId = current.getAttribute("id");
+ScrollReveal().reveal(".about__image__movil", {
+    ...scrollRevealOptionMovil,
+});
 
-        /*comprobamos que si la posición del scroll esta dentro de alguna de las secciones, agregamos
-        la clase .active al link correspondiente y removemos el de los otros */
-        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
-            document.querySelector('.menu__item a[href*=' + sectionId + ']').classList.add("menu__link--active");
-        }else{
-            document.querySelector('.menu__item a[href*=' + sectionId + ']').classList.remove("menu__link--active");
+ScrollReveal().reveal(".about__content h4", {
+    ...scrollRevealOption,
+});
+
+ScrollReveal().reveal(".about__content .parrafo1", {
+    ...scrollRevealOption,
+    delay: 500,
+});
+
+ScrollReveal().reveal(".about__content .parrafo2", {
+    ...scrollRevealOption,
+    delay: 1000,
+});
+
+ScrollReveal().reveal(".about__content .parrafo3", {
+    ...scrollRevealOption,
+    delay: 1500,
+});
+
+ScrollReveal().reveal(".skill__container", {
+    ...scrollRevealOption,
+    delay: 2000
+});
+
+ScrollReveal().reveal(".service__card", {
+    ...scrollRevealOption,
+    interval: 500,
+});
+
+ScrollReveal().reveal(".blog__card", {
+    ...scrollRevealOption,
+    interval: 500,
+})
+
+
+/* SELECTOR PARA ESTUDIOS O EXPERIENCIA */
+
+const tabList = document.querySelector(".resume__tablist"); 
+
+tabList.addEventListener("click", (e) =>{
+    const tabIndex = e.target.dataset.tab;
+    if(!tabIndex) return
+
+    const tabs = document.querySelectorAll("[data-tab]");
+    Array.from(tabs).forEach(tab => {
+        if(tab.dataset.tab === tabIndex){
+            tab.classList.add("active");
+        }else {
+            tab.classList.remove("active");
         }
     });
 
+    const activePanel = document.querySelector(".panel__grid.active");
+    const toActivePanel = document.querySelector(`[data-panel="${tabIndex}"]`);
+    if(activePanel.dataset.panel === tabIndex) return;
+    activePanel.classList.add("close");
+    activePanel.addEventListener(
+        "animationend",
+        (e) => {
+            activePanel.classList.remove("active");
+            activePanel.classList.remove("close");
+            toActivePanel.classList.add("active");
+        },
+        {once : true}
+    )
+
+});
+
+/* SWIPER TESTIMONIOS */
+
+const swiper = new Swiper(".swiper", {
+    slidesPerview: "auto",
+    spaceBetween: 30,
+    loop: true,
 });
 
 
-/*Eventos click */
-btnShare.addEventListener("click", compartir);
 
-linkPortfolio.forEach(l => l.addEventListener("click", activePortfolio));
 
-document.querySelector(".portfolio__popup-close").addEventListener("click", togglePortfolioPopup);
 
-/*= work popup =*/
-document.addEventListener("click", (e) => {
-    if(e.target.classList.contains("portfolio__button")){
-        togglePortfolioPopup();
-        portfolioItemDetails(e.target.parentElement);
-    }
-});
+
+
+/* FILTRO PROYECTOS */
+
+
+
+
+

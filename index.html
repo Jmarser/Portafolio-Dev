@@ -8,860 +8,488 @@
     <link rel="shortcut icon" href="./img/logo_sin.ico" type="image/x-icon">
     <title>Portfolio Jmarser</title>
 
-    <!--============================= UNICONS =============================-->
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <!--============================= remixicons =============================-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
 
-    <!--============================ BOXICONS =============================-->
-    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-
-    <!--=========================== SWIPER CSS ============================-->
-    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <!--============================= SWIPER =============================-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
     <!--============================ STYLE CSS ============================-->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-
-    <!--****************************** SIDEBAR ******************************-->
-    <div class="nav__toggle" id="nav-toggle">
-        <i class='bx bx-menu'></i>
-    </div>
-    <aside class="sidebar" id="sidebar">
-        <nav class="nav">
-            <div class="nav__logo">
-                <a href="#" class="nav__link">
-                    <img src="./img/logo_sin.png" alt="marca personal" class="logo">
-                </a>
-            </div>
-            <div class="nav__menu">
-                <div class="menu">
-                    <ul class="menu__list">
-                        <li class="menu__item"><a href="#home" class="menu__link menu__link--active">Inicio</a></li>
-                        <li class="menu__item"><a href="#about" class="menu__link">Sobre mi</a></li>
-                        <li class="menu__item"><a href="#skills" class="menu__link">Habilidades</a></li>
-                        <li class="menu__item"><a href="#portfolio" class="menu__link">Portfolio</a></li>
-                        <li class="menu__item"><a href="#services" class="menu__link">Servicios</a></li>
-                        <li class="menu__item"><a href="#contact" class="menu__link">Contacto</a></li>
-                    </ul>
+    
+        <!--************************* Sección nav *************************-->
+        <nav>
+            <div class="nav__header">
+                <div class="nav__logo">
+                    <a href="#">Jmarser<span>.</span></a>
+                </div>
+                <div class="nav__menu__btn" id="menu-btn">
+                    <i class="ri-menu-line"></i>
                 </div>
             </div>
-            <div class="btn__share">
-                <i class='bx bx-share-alt social__share' id="btnShare"></i>
-            </div>
-
-            <div class="nav__close" id="nav-close">
-                <i class='bx bx-x'></i>
-            </div>
+            <ul class="nav__links" id="nav-links">
+                <li class="link"><a href="#home">Inicio</a></li>
+                <li class="link"><a href="#about">Sobre mí</a></li>
+                <li class="link"><a href="#resume">Recorrido</a></li>
+                <li class="link"><a href="#service">Servicios</a></li>
+                <li class="link"><a href="#portfolio">Portfolio</a></li>
+                <li class="link"><a href="#contact">Contacto</a></li>
+            </ul>
         </nav>
-    </aside>
-    <!--**************************** END SIDEBAR ****************************-->
-    <!--******************************* MAIN *******************************-->
-    <main class="main">
-        <!--******************************* HOME *******************************-->
-        <section class="home" id="home">
-            <div class="home__container container grid">
-                <div class="home__social">
-                    <span class="social__text">Sigueme</span>
-                    <div class="social__links">
-                        <a href="https://www.linkedin.com/in/jmarser-dev" rel="noopener noreferrer" class="social__link" target="_blank">
-                            <i class='bx bxl-linkedin'></i>
-                        </a>
-                        <a href="https://www.instagram.com/jmarser_dev/" rel="noopener noreferrer" class="social__link" target="_blank">
-                            <i class='bx bxl-instagram'></i>
-                        </a>
-                        <a href="https://github.com/Jmarser" rel="noopener noreferrer" class="social__link" target="_blank">
-                            <i class='bx bxl-github'></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="home__data">
-                    <h3 class="home__title">Hola, soy</h3>
-                    <h2 class="home__subtitle">Juan Márquez</h2>
-                    <h1 class="home__info"><span class="typing"></span></h1>
-                    <a href="#about" class="button">
-                        <i class='bx bx-user button__icon'></i>
-                        Sobre mi
-                    </a>
-                    <a href="" download="./download/CV Developer 2022.pdf" class="button">
-                        <i class='bx bxs-file-pdf button__icon'></i>
-                        Curriculum
-                    </a>
-                </div>
-            </div>
-        </section>
-        <!--***************************** END HOME *****************************-->
-        <!--******************************* ABOUT ******************************-->
-        <section class="about section" id="about">
-            <h2 class="section__title" data-heading="Mi Viaje">Sobre Mí</h2>
 
-            <div class="about__container container grid">
-                <img src="./img/hero.png" alt="" class="about__img">
+        <!--************************* Sección home *************************-->
 
-                <div class="about__data">
-
-                    <h3 class="about__heading">Me presento un poco</h3>
-                    <p class="about__description">
-                        Desarrollador de aplicaciones multiplataforma y web. Me considero una
-                        persona metódica, constante y asertiva, con capacidad de adaptación y planificación en la
-                        ejecución de tareas técnicas y con destrezas para trabajar en equipos multidisciplinares.
-                        Cuento con sólidos conocimientos académicos en múltiples lenguajes de programación, maquetación
-                        y framework’s, así como habilidades para aplicar tales conocimientos a mi práctica profesional.
-                    </p>
-                    <div class="about__info grid">
-                        <!-- Caja de información-->
-                        <div class="about__box">
-                            <i class='bx bx-medal about__icon'></i>
-                            <h3 class="about__title">Experiencia</h3>
-                            <span class="about__subtitle">2 Años</span>
-                        </div>
-                        <!-- Fin caja info -->
-                        <div class="about__box">
-                            <i class='bx bx-briefcase-alt-2 about__icon'></i>
-                            <h3 class="about__title">Completados</h3>
-                            <span class="about__subtitle">+10 Proyectos</span>
-                        </div>
-                    </div>
-                    <a href="#contact" class="button">Hablamos<i class='bx bx-send button__icon'></i></a>
-                </div>
-            </div>
-
-        </section>
-        <!--***************************** Cualificación ****************************-->
-        <section class="qualification section">
-            <h2 class="section__title" data-heading="Mi Ruta">Cualificación</h2>
-
-            <div class="qualification__container container grid">
-                <div class="education qualification__box">
-                    <h3 class="qualification__title">
-                        <i class='bx bxs-graduation qualification__icon'></i>Formación
-                    </h3>
-                    <div class="timeline">
-                        <!-- campo de informacion -->
-                        <div class="timeline__item">
-                            <div class="circle__dot"></div>
-                            <span class="timeline__date"><i class='bx bx-calendar bx-sm'></i>2021 - Present</span>
-                            <h3 class="timeline__title">CFGS Desarrollo de aplicaciones web</h3>
-                            <p class="timeline__text">I.E.S. Trassierra, Córdoba</p>
-                        </div>
-                        <div class="timeline__item">
-                            <div class="circle__dot"></div>
-                            <span class="timeline__date"><i class='bx bx-calendar bx-sm'></i>2021 - 2022</span>
-                            <h3 class="timeline__title">(IFCD0210) - Desarrollo de aplicaciones con tecnología web</h3>
-                            <p class="timeline__text">Academia Alboran s.l., Montilla</p>
-                        </div>
-                        <div class="timeline__item">
-                            <div class="circle__dot"></div>
-                            <span class="timeline__date"><i class='bx bx-calendar bx-sm'></i>2018 - 2021</span>
-                            <h3 class="timeline__title">CFGS Desarrollo de aplicaciones multiplataforma</h3>
-                            <p class="timeline__text">I.E.S. Trassierra, Córdoba</p>
-                        </div>
-                        <!-- fin campo informacion -->
-                        <div class="timeline__item">
-                            <div class="circle__dot"></div>
-                            <h3 class="timeline__title">B.U.P.</h3>
-                            <p class="timeline__text">I.E.S. López Neyra, Córdoba</p>
-                            <span class="timeline__date"><i class='bx bx-calendar bx-sm'></i>2001</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="experience qualification__box">
-                    <h3 class="qualification__title">
-                        <i class='bx bx-briefcase-alt-2 qualification__icon'></i>Experiencia
-                    </h3>
-                    <div class="timeline">
-                        <!-- campo de informacion -->
-                        <div class="timeline__item">
-                            <div class="circle__dot"></div>
-                            <span class="timeline__date"><i class='bx bx-calendar bx-sm'></i>2021</span>
-                            <h3 class="timeline__title">Desarrollador aplicaciones android</h3>
-                            <p class="timeline__text">Singlab, nuevas tecnologías s.l.</p>
-                            <ul class="task__list">
-                                <li class="task">Realización de componentes layout para diferentes aplicaciones android junto con la implementación de su funcionalidad</li>
-                                <li class="task">Implementación de conexión de varias aplicaciones a api's por medio de Retrofit.</li>
-                            </ul>
-                        </div>
-                        <!-- fin campo informacion -->
-                        <div class="timeline__item">
-                            <div class="circle__dot"></div>
-                            <span class="timeline__date"><i class='bx bx-calendar bx-sm'></i>2022</span>
-                            <h3 class="timeline__title">Diseño web</h3>
-                            <p class="timeline__text">Enchufe Solar s.l.</p>
-                            <ul class="task__list">
-                                <li class="task">Realización del mantenimiento de páginas web creadas con el CMS Wordpress.</li>
-                                <li class="task">Creación de páginas web con el CMS Wordpress para proyectos ya en activo.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="cursos qualification__box">
-                    <h3 class="qualification__title">
-                        <i class='bx bx-recycle qualification__icon'></i>Cursos - Certificaciones
-                    </h3>
-                    <div class="timeline">
-                        <!-- campo de informacion -->
-                        <div class="timeline__item">
-                            <div class="circle__dot"></div>
-                            <span class="timeline__date"><i class='bx bx-calendar bx-sm'></i>2021 - 160h.</span>
-                            <h3 class="timeline__title">(IFCD095PO) - Desarrollo de apps android para la digitalización de empresas</h3>
-                            <p class="timeline__text">Moba Skill Training</p>
-                        </div>
-                        <!-- fin campo informacion -->
-                        <div class="timeline__item">
-                            <div class="circle__dot"></div>
-                            <span class="timeline__date"><i class='bx bx-calendar bx-sm'></i>2021</span>
-                            <h3 class="timeline__title">Retrofit 2 Android</h3>
-                            <p class="timeline__text">Udemy</p>
-                        </div>
-                        <div class="timeline__item">
-                            <div class="circle__dot"></div>
-                            <span class="timeline__date"><i class='bx bx-calendar bx-sm'></i>2021</span>
-                            <h3 class="timeline__title">Rest-Full Java Spring Boot</h3>
-                            <p class="timeline__text">Udemy</p>
-                        </div>
-                        <div class="timeline__item">
-                            <div class="circle__dot"></div>
-                            <span class="timeline__date"><i class='bx bx-calendar bx-sm'></i>2021</span>
-                            <h3 class="timeline__title">HTML5 desde cero</h3>
-                            <p class="timeline__text">Udemy</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--*************************** End Cualificación **************************-->
-        <!--***************************** END ABOUT ****************************-->
-        <!--****************************** SKILLS ******************************-->
-        <section class="section skills section" id="skills">
-            <h2 class="section__title" data-heading="Que domino">Mis Habilidades</h2>
-
-            <div class="skills__container container grid">
-                <div class="skills__images grid">
-                    <div class="skill">
-                        <img src="./img/logos/html5.png" alt="HTML5" title="HTML5" class="skill__img">
-                    </div>
-                    <div class="skill">
-                        <img src="./img/logos/css.png" alt="CSS3" title="CSS3" class="skill__img">
-                    </div>
-                    <div class="skill">
-                        <img src="./img/logos/javascript.png" alt="JavaScript" title="JavaScript" class="skill__img">
-                    </div>
-                    <div class="skill">
-                        <img src="./img/logos/java.png" alt="Java" title="Java" class="skill__img">
-                    </div>
-                    <div class="skill">
-                        <img src="./img/logos/php.png" alt="PHP" title="PHP" class="skill__img">
-                    </div>
-                    <div class="skill">
-                        <img src="./img/logos/MySql.png" alt="MySql" title="MySql" class="skill__img">
-                    </div>
-                    <div class="skill">
-                        <img src="./img/logos/Sqlite.png" alt="SqLite" title="SqLite" class="skill__img">
-                    </div>
-                    <div class="skill">
-                        <img src="./img/logos/laravel.png" alt="Laravel" title="Laravel" class="skill__img">
-                    </div>
-                    <div class="skill">
-                        <img src="./img/logos/android.png" alt="Android" title="Android" class="skill__img">
-                    </div>
-                    <div class="skill">
-                        <img src="./img/logos/Ajax.png" alt="Ajax" title="Ajax" class="skill__img">
-                    </div>
-                    <div class="skill">
-                        <img src="./img/logos/Jquery.png" alt="Jquery" title="Jquery" class="skill__img">
-                    </div>
-                    <div class="skill">
-                        <img src="./img/logos/Git.png" alt="Git" title="Git" class="skill__img">
-                    </div>
-                    <div class="skill">
-                        <img src="./img/logos/GitHub.png" alt="GitHub" title="GitHub" class="skill__img">
-                    </div>
-                </div>
-                <div class="skills_info">
-                    <h3 class="skills__title">Mis herramientas de trabajo</h3>
-                    <p class="skills__subtitle">Con el desarrollo de mis estudios me adentré en el conocimiento de los
-                        lenguajes necesarios para ser desarrollador de aplicaciones móviles android y web.<br/>
-                        Con la realización de proyectos personales y gracias a la necesidad de siempre mejorar,
-                        profundicé en el conocimiento de estos lenguajes y tomé contacto con otros.<br/>
-                        Es con el desarrollo profesional donde he aprendido nuevas herramientas y habilidades y la mejor
-                        manera de implementarlas en los proyectos.</p>
-                </div>
-            </div>
-        </section>
-        <!--**************************** END SKILLS ****************************-->
-        <!--***************************** PORTFOLIO ****************************-->
-        <section class="portfolio section" id="portfolio">
-            <h2 data-heading="Trabajos recientes" class="section__title">Portafolio</h2>
-            <div class="portfolio__filters">
-                <span class="portfolio__item active-portfolio" data-filter="all">Todos</span>
-                <span class="portfolio__item" data-filter=".web">Web</span>
-                <span class="portfolio__item" data-filter=".app">App web</span>
-                <span class="portfolio__item" data-filter=".android">Android</span>
-                <!--<span class="portfolio__item" data-filter=".shop">Woocommerce</span>-->
-                <span class="portfolio__item" data-filter=".personal">Personales</span>
-            </div>
-            <div class="portfolio__container container grid">
-                <div class="portfolio__card mix web personal">
-                    <img src="./img/portfolio.jpg" alt="" class="portfolio__img">
-                    <h3 class="portfolio__title">Portafolio personal</h3>
-                    <span class="portfolio__button">
-                        Info
-                        <i class="uil uil-arrow-right portfolio__button-icon"></i>
-                    </span>
-                    <div class="portfolio__item-details">
-                        <h3 class="details__title"></h3>
-                        <p class="details__description">Página web en la que muestro un curriculum ampliado y donde se
-                            puede ver lo que se hacer en los lenguajes web de front-end y muestro otras informaciones
-                            sobre mi perfil profesional.</p>
-                        <ul class="details__info">
-                            <li>Creado - <span>08 Abril 2022</span></li>
-                            <li>Tecnologías - <span>html, css, js</span></li>
-                            <li>Role - <span>Frontend</span></li>
-                            <li>Pruebalo - <span>No subido</span></li>
-                            <li>Repositorio - <span><a href="https://github.com/Jmarser/Portafolio-Dev" rel="noopener noreferrer"
-                                        class="home__social-link" target="_blank">
-                                        <i class='bx bxl-github work__icon'></i>
-                                    </a></span></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="portfolio__card mix app personal">
-                    <img src="./img/api.jpg" alt="" class="portfolio__img">
-                    <h3 class="portfolio__title">API Rest FCT</h3>
-                    <span class="portfolio__button">
-                        Info
-                        <i class="uil uil-arrow-right portfolio__button-icon"></i>
-                    </span>
-                    <div class="portfolio__item-details">
-                        <h3 class="details__title"></h3>
-                        <p class="details__description">Api Rest desarrollada para el proyecto de fin de curso DAM.
-                            Desarrollada en lenguaje Java y con el framework SpringBoot.</p>
-                        <ul class="details__info">
-                            <li>Creado - <span>18 Mayo 2021</span></li>
-                            <li>Tecnologías - <span>Java, SpringBoot</span></li>
-                            <li>Role - <span>Back-end</span></li>
-                            <li>Pruebalo - <span>No subido</span></li>
-                            <li>Repositorio - <span><a href="https://github.com/Jmarser/ProyectoApi" rel="noopener noreferrer"
-                                        class="home__social-link" target="_blank">
-                                        <i class='bx bxl-github work__icon'></i>
-                                    </a></span></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="portfolio__card mix personal">
-                    <img src="./img/work-3.jpg" alt="" class="portfolio__img">
-                    <h3 class="portfolio__title">Gestor FCT</h3>
-                    <span class="portfolio__button">
-                        Info
-                        <i class="uil uil-arrow-right portfolio__button-icon"></i>
-                    </span>
-                    <div class="portfolio__item-details">
-                        <h3 class="details__title"></h3>
-                        <p class="details__description">Aplicación de escritorio desarrollada como parte del proyecto de
-                            fin de curso DAM. Gestiona los alumnos que van a realizar las prácticas en empresas
-                            asignandolos a sus respectivos tutores.</p>
-                        <ul class="details__info">
-                            <li>Creado - <span>9 Junio 2021</span></li>
-                            <li>Tecnologías - <span>Java</span></li>
-                            <li>Role - <span>Front-end, Back-end</span></li>
-                            <li>Pruebalo - <span>No subido</span></li>
-                            <li>Repositorio - <span><a href="https://github.com/Jmarser/ProyectoDesktop" rel="noopener noreferrer"
-                                        class="home__social-link" target="_blank">
-                                        <i class='bx bxl-github work__icon'></i>
-                                    </a></span></li>
-                        </ul>
-
-                    </div>
-                </div>
-                <div class="portfolio__card mix android personal">
-                    <img src="./img/blog1.jpg" alt="" class="portfolio__img">
-                    <h3 class="portfolio__title">App móvil FCT</h3>
-                    <span class="portfolio__button">
-                        Info
-                        <i class="uil uil-arrow-right portfolio__button-icon"></i>
-                    </span>
-                    <div class="portfolio__item-details">
-                        <h3 class="details__title"></h3>
-                        <p class="details__description">Aplicación móvil que forma parte del proyecto de fin de curso
-                            DAM. La aplicación permite a los alumnos registrados rellenar las fichas de control y
-                            almacenarlas en la base de datos externa y a los tutores validar las fichas realizadas por
-                            los alumnos que tienen asignados.</p>
-                        <ul class="details__info">
-                            <li>Creado - <span>10 Junio 2021</span></li>
-                            <li>Tecnologías - <span>Java, Retrofit</span></li>
-                            <li>Role - <span>Front-end, Back-end</span></li>
-                            <li>Pruebalo - <span>No subido</span></li>
-                            <li>Repositorio - <span><a href="https://github.com/Jmarser/ProyectoDesktop" rel="noopener noreferrer"
-                                        class="home__social-link" target="_blank">
-                                        <i class='bx bxl-github work__icon'></i>
-                                    </a></span></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="portfolio__card mix web personal">
-                    <img src="./img/locu-bingo.jpg" alt="" class="portfolio__img">
-                    <h3 class="portfolio__title">Locutor de Bingo</h3>
-                    <span class="portfolio__button">
-                        Info
-                        <i class="uil uil-arrow-right portfolio__button-icon"></i>
-                    </span>
-                    <div class="portfolio__item-details">
-                        <h3 class="details__title"></h3>
-                        <p class="details__description">Una página web simple que simula un locutor de bolas de bingo.
-                            Todo empezo por un reto de un amigo que me dijo que no era capaz de hacerlo, pues si y
-                            además habla.</p>
-                        <ul class="details__info">
-                            <li>Creado - <span>08 Abril 2022</span></li>
-                            <li>Tecnologías - <span>html, css, js</span></li>
-                            <li>Role - <span>Frontend</span></li>
-                            <li>Pruebalo - <span><a href="https://locutor-bingo-jms.netlify.app/" rel="noopener noreferrer"
-                                        class="home__social-link" target="_blank">
-                                        <i class='bx bxl-netlify work__icon'></i>
-                                    </a></span></li>
-                            <li>Repositorio - <span><a href="https://github.com/Jmarser/Locutor-de-bingo" rel="noopener noreferrer"
-                                        class="home__social-link" target="_blank">
-                                        <i class='bx bxl-github work__icon'></i>
-                                    </a></span></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="portfolio__card mix web personal">
-                    <img src="./img/pokedex-2.png" alt="" class="portfolio__img">
-                    <h3 class="portfolio__title">Pokedex web</h3>
-                    <span class="portfolio__button">
-                        Info
-                        <i class="uil uil-arrow-right portfolio__button-icon"></i>
-                    </span>
-                    <div class="portfolio__item-details">
-                        <h3 class="details__title"></h3>
-                        <p class="details__description">Aplicación web que por medio de funciones asíncronas obtiene
-                            información de una api, para mostrarla en forma de tarjetas pokemon.</p>
-                        <ul class="details__info">
-                            <li>Creado - <span>17 Abril 2022</span></li>
-                            <li>Tecnologías - <span>html, css, js</span></li>
-                            <li>Role - <span>Frontend</span></li>
-                            <li>Pruebalo - <span><a href="https://pokedex-ultra-jms.netlify.app/" rel="noopener noreferrer"
-                                        class="home__social-link" target="_blank">
-                                        <i class='bx bxl-netlify work__icon'></i>
-                                    </a></span></li>
-                            <li>Repositorio - <span><a href="https://github.com/Jmarser/Pokedex_web" rel="noopener noreferrer"
-                                        class="home__social-link" target="_blank">
-                                        <i class='bx bxl-github work__icon'></i>
-                                    </a></span></li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- Tarjeta de trabajo -->
-                <div class="portfolio__card mix personal">
-                    <img src="./img/encrip.jpg" alt="" class="portfolio__img">
-                    <h3 class="portfolio__title">Encriptador con algoritmo AES</h3>
-                    <span class="portfolio__button">
-                        Info
-                        <i class="uil uil-arrow-right portfolio__button-icon"></i>
-                    </span>
-                    <div class="portfolio__item-details">
-                        <h3 class="details__title"></h3>
-                        <p class="details_description">Clase que nos permite realizar la encriptación/desencriptación
-                            usando el algoritmo AES.</p>
-                        <ul class="details__info">
-                            <li>Creado - <span>15 abril 2021</span></li>
-                            <li>Tecnologías - <span>Java</span></li>
-                            <li>Role - <span>Back-end</span></li>
-                            <li>Pruebalo - <span>No subido</span></li>
-                            <li>Repositorio - <span><a href="https://github.com/Jmarser/EncriptadorAES" rel="noopener noreferrer"
-                                        class="home__social-link" target="_blank">
-                                        <i class='bx bxl-github work__icon'></i>
-                                    </a></span></li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- fin tarjeta trabajo -->
-                <div class="portfolio__card mix personal">
-                    <img src="./img/llaves.jpg" alt="" class="portfolio__img">
-                    <h3 class="portfolio__title">Generador de claves</h3>
-                    <span class="portfolio__button">
-                        Info
-                        <i class="uil uil-arrow-right portfolio__button-icon"></i>
-                    </span>
-                    <div class="portfolio__item-details">
-                        <h3 class="details__title"></h3>
-                        <p class="details_description">Clase que nos permite generar claves de longitud y dificultad que
-                            puede seleccionar el usuario.</p>
-                        <ul class="details__info">
-                            <li>Creado - <span>9 Junio 2021</span></li>
-                            <li>Tecnologías - <span>Java</span></li>
-                            <li>Role - <span>Front-end, Back-end</span></li>
-                            <li>Pruebalo - <span>No subido</span></li>
-                            <li>Repositorio - <span><a href="https://github.com/Jmarser/GeneradorClaves" rel="noopener noreferrer"
-                                        class="home__social-link" target="_blank">
-                                        <i class='bx bxl-github work__icon'></i>
-                                    </a></span></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="portfolio__card mix web personal">
-                    <img src="./img/Generador password HTML-CSS-JS 2.png" alt="" class="portfolio__img">
-                    <h3 class="portfolio__title">Generador de claves HTML - CSS - JS</h3>
-                    <span class="portfolio__button">
-                        Info
-                        <i class="uil uil-arrow-right portfolio__button-icon"></i>
-                    </span>
-                    <div class="portfolio__item-details">
-                        <h3 class="details__title"></h3>
-                        <p class="details_description">Web que nos permite crear claves de longitud deseada y de complejidad ajustable por el usuario.
-                            <br/>También nos permite copiar el paswword generado en el portapapeles y poderlo usar donde lo necesitemos.
-                        </p>
-                        <ul class="details__info">
-                            <li>Creado - <span>14 Abril 2022</span></li>
-                            <li>Tecnologías - <span>HTML - CSS - Javascript</span></li>
-                            <li>Role - <span>Front-end, Back-end</span></li>
-                            <li>Pruebalo - <span><a href="https://genpassword-jms.netlify.app/" rel="noopener noreferrer"
-                                class="home__social-link" target="_blank">
-                                <i class='bx bxl-netlify work__icon'></i>
-                            </a></span></li>
-                            <li>Repositorio - <span><a href="https://github.com/Jmarser/Generador--password-Html-CSS-Js" rel="noopener noreferrer"
-                                        class="home__social-link" target="_blank">
-                                        <i class='bx bxl-github work__icon'></i>
-                                    </a></span></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- portfolio popup -->
-        <div class="portfolio__popup">
-            <div class="portfolio__popup-inner">
-                <div class="portfolio__popup-content grid">
-                    <span class="portfolio__popup-close"><i class="uil uil-times"></i></span>
-                    <div class="portfolio__thumbnail">
-                        <img src="./img/work-1.jpg" alt="" class="portfolio__popup-img">
-                    </div>
-                    <div class="portfolio__popup-info">
-                        <div class="portfolio__popup-subtitle"><span>Diseño</span></div>
-                        <div class="portfolio__popup-body">
-                            <h3 class="details__title"></h3>
-                            <p class="details__description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Expedita, odit.</p>
-                            <ul class="details__info">
-                                <li>Creado - <span>4 dic 2020</span></li>
-                                <li>Tecnologías - <span>html, css, js</span></li>
-                                <li>Role - <span>Frontend</span></li>
-                                <li>Vista - <span> <a href="#">www.domain.com</a> </span></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+    <header class="header" id="home">
+        <div class="secction__container header__container">
+            <h4>Hola, soy Juan Márquez</h4>
+            <h1>Desarrollador android / iOS</h1>
+            <p class="section__description">
+                Desarrollador de aplicaciones, transformo ideas en aplicaciones intuitivas, adaptables y de calidad, utilizando las mejores tecnologías del mercado.
+            </p>
+            <div class="header__btns">
+                <button class="btn btn__primary" id="download-cv">Download cv</button>
+                <button class="btn btn__secundary">Conoceme</button>
             </div>
         </div>
-        <!--*************************** END PORTFOLIO **************************-->
-        <!--***************************** SERVICES *****************************-->
-        <section class="services section" id="services">
-            <h2 data-heading="Mis servicios" class="section__title">Qué puedo ofrecer</h2>
-            <div class="services__container container grid">
-                <!-- tarjeta servicio -->
-                <div class="services__content">
-                    <div class="services__info">
-                        <!--<i class="uil uil-mobile-android services__icon"></i>-->
-                        <div class="services__img">
-                            <img src="./img/frontend.svg" alt="">
-                        </div>
-                        <h3 class="services__title">Desarrollo <br> Web </h3>
-                    </div>
-                    <span class="services__button">
-                        Ver más <i class='bx bx-right-arrow-alt bx-sm services__button-icon'></i>
-                    </span>
-                    <div class="services__modal">
-                        <div class="services__modal-content">
-                            <i class="uil uil-times services__modal-close"></i>
-                            <h3 class="services__modal-title">Desarrollo web</h3>
-                            <p class="services__modal-description">Apartir de la idea del cliente y usando varias
-                                tecnologías web desarrollo sitios web atractivos, ágiles y responsivos. </p>
-                            <ul class="services__modal-services grid">
-                                <li class="services__modal-service">
-                                    <i class="uil uil-check-circle services__modal-icon"></i>
-                                    <p class="services__modal-info">Desarrollar la parte visual y estructura de un site
-                                        web.</p>
-                                </li>
-                                <li class="services__modal-service">
-                                    <i class="uil uil-check-circle services__modal-icon"></i>
-                                    <p class="services__modal-info">Diseñar una interfaz que mejore la usabilidad e
-                                        interacción con el usuario.</p>
-                                </li>
-                                <li class="services__modal-service">
-                                    <i class="uil uil-check-circle services__modal-icon"></i>
-                                    <p class="services__modal-info">Diseños responsive de los site web.</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- fin tarjeta servicio -->
-                <div class="services__content">
-                    <div class="services__info">
-                        <!--<i class="uil uil-mobile-android services__icon"></i>-->
-                        <div class="services__img">
-                            <img src="./img/app web.svg" alt="">
-                        </div>
-                        <h3 class="services__title">Desarrollo <br> Apps Web </h3>
-                    </div>
-                    <span class="services__button">
-                        Ver más <i class='bx bx-right-arrow-alt bx-sm services__button-icon'></i>
-                    </span>
-                    <div class="services__modal">
-                        <div class="services__modal-content">
-                            <i class="uil uil-times services__modal-close"></i>
-                            <h3 class="services__modal-title">Desarrollador Back-end</h3>
-                            <p class="services__modal-description">Partiendo de las necesidades del cliente desarrollar
-                                una aplicación web que pueda ser accedida desde diferentes plataformas y por múltiples
-                                usuarios a la vez.</p>
-                            <ul class="services__modal-services grid">
-                                <li class="services__modal-service">
-                                    <i class="uil uil-check-circle services__modal-icon"></i>
-                                    <p class="services__modal-info">Diseño de base datos necesaria para tu aplicación
-                                        web.</p>
-                                </li>
-                                <li class="services__modal-service">
-                                    <i class="uil uil-check-circle services__modal-icon"></i>
-                                    <p class="services__modal-info">Implementar los sistemas de seguridad necesarios
-                                        para controlar el acceso a tu aplicación.</p>
-                                </li>
-                                <li class="services__modal-service">
-                                    <i class="uil uil-check-circle services__modal-icon"></i>
-                                    <p class="services__modal-info">Desarrollo de una Api para permitir que compartir la
-                                        información con diferentes aplicaciones.</p>
-                                </li>
-                                <li class="services__modal-service">
-                                    <i class="uil uil-check-circle services__modal-icon"></i>
-                                    <p class="services__modal-info">Mantenimiento tanto de tu sitio web como de tu base
-                                        de datos.</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="services__content">
-                    <div class="services__info">
-                        <!--<i class="uil uil-mobile-android services__icon"></i>-->
-                        <div class="services__img">
-                            <img src="./img/desarrollo_movil.svg" alt="">
-                        </div>
-                        <h3 class="services__title">Desarrollo<br> App móvil </h3>
-                    </div>
-                    <span class="services__button">
-                        Ver más <i class='bx bx-right-arrow-alt bx-sm services__button-icon'></i>
-                    </span>
-                    <div class="services__modal">
-                        <div class="services__modal-content">
-                            <i class="uil uil-times services__modal-close"></i>
-                            <h3 class="services__modal-title">Desarrollador Android</h3>
-                            <p class="services__modal-description">Desarrollo de aplicaciones móviles android.</p>
-                            <ul class="services__modal-services grid">
-                                <li class="services__modal-service">
-                                    <i class="uil uil-check-circle services__modal-icon"></i>
-                                    <p class="services__modal-info">Desarrollo de una interfaz amigable y fácil de usar.
-                                    </p>
-                                </li>
-                                <li class="services__modal-service">
-                                    <i class="uil uil-check-circle services__modal-icon"></i>
-                                    <p class="services__modal-info">Implementar almacenamiento en base de datos interna.
-                                    </p>
-                                </li>
-                                <li class="services__modal-service">
-                                    <i class="uil uil-check-circle services__modal-icon"></i>
-                                    <p class="services__modal-info">Alamacenamiento en base de datos externa tipo
-                                        Firebase.</p>
-                                </li>
-                                <li class="services__modal-service">
-                                    <i class="uil uil-check-circle services__modal-icon"></i>
-                                    <p class="services__modal-info">Establecer la conexión de la aplicación con
-                                        cualquier Api Rest.</p>
-                                </li>
-                                <li class="services__modal-service">
-                                    <i class="uil uil-check-circle services__modal-icon"></i>
-                                    <p class="services__modal-info">Realizar mantenimiento de la aplicación móvil.</p>
-                                </li>
-                                <li class="services__modal-service">
-                                    <i class="uil uil-check-circle services__modal-icon"></i>
-                                    <p class="services__modal-info">Actualización de la aplicación a las nuevas
-                                        necesidades del cliente.</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--* Testimonios
-        <section class="testimonials section">
-            <h2 data-heading="Mis clientes opinan" class="section__title">Testimonios</h2>
+    </header>
 
-            <div class="testimonials__container container swiper">
-                <div class="swiper-wrapper">
-                    Un testimonio 
-                    <div class="testimonial__card swiper-slide">
-                        <div class="testimonial__quote">
-                            <i class='bx bxs-quote-alt-left'></i>
-                        </div>
-                        <p class="testimonial__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, unde.</p>
-                        <h3 class="testimonial__date">27 Enero 2021</h3>
-                        <div class="testimonial__profile">
-                            <img src="./img/testimonial-1.webp" alt="" class="testimonial__profile-img">
-                            <div class="testimonial__profile-data">
-                                <span class="testimonial__profile-name">John Wick</span>
-                                <span class="testimonial__profile-detail">Baba yaga</span>
-                            </div>
-                        </div>
-                    </div>
-                    fin del testimonio
-                    <div class="testimonial__card swiper-slide">
-                        <div class="testimonial__quote">
-                            <i class='bx bxs-quote-alt-left'></i>
-                        </div>
-                        <p class="testimonial__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, unde.</p>
-                        <h3 class="testimonial__date">27 Enero 2021</h3>
-                        <div class="testimonial__profile">
-                            <img src="./img/testimonial-2.jpg" alt="" class="testimonial__profile-img">
-                            <div class="testimonial__profile-data">
-                                <span class="testimonial__profile-name">Sheldon</span>
-                                <span class="testimonial__profile-detail">Big bang</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial__card swiper-slide">
-                        <div class="testimonial__quote">
-                            <i class='bx bxs-quote-alt-left'></i>
-                        </div>
-                        <p class="testimonial__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, unde.</p>
-                        <h3 class="testimonial__date">27 Enero 2021</h3>
-                        <div class="testimonial__profile">
-                            <img src="./img/testimonial-4.jpg" alt="" class="testimonial__profile-img">
-                            <div class="testimonial__profile-data">
-                                <span class="testimonial__profile-name">Lourdes</span>
-                                <span class="testimonial__profile-detail">CEO Robotica Nova</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-pagination"></div>
+        <!--************************* Sección  About *************************-->
+
+        <section class="section__container about__container" id="about">
+            <div class="about__image">
+                <img class="about__image__web" src="img/desarrollo_movil.svg" alt="movil">
+                <img class="about__image__movil" src="img/app web.svg" alt="web">
             </div>
-        </section>
-         Fin testimonios *-->
-        <!--**************************** END SERVICES **************************-->
-        <!--****************************** CONTACT *****************************-->
-        <section class="contact section" id="contact">
-            <h2 data-heading="Hablamos" class="section__title">Contacto</h2>
-            <div class="contact__container container grid">
-                <!--
-                <div class="contact__content">
-                    <div class="contact__info grid">
-                        <!- tarjeta con informacion de contacto --
-                        <div class="contact__card">
-                            <i class="uil uil-envelope-edit contact__icon"></i>
-                            <h3 class="contect__card-title">Email</h3>
-                            <span class="contact__card-data">user#gmail.com</span>
-                            <span class="contact__button">
-                                Escribeme
-                                <i class="uil uil-arrow-right contact__button-icon"></i>
-                            </span>
-                        </div>
-                        <!- fin de la tarjeta --
-                        <div class="contact__card">
-                            <i class="uil uil-whatsapp-alt contact__icon"></i>
-                            <h3 class="contect__card-title">Whatsapp</h3>
-                            <span class="contact__card-data">777-999-666</span>
-                            <span class="contact__button">
-                                Llamame
-                                <i class="uil uil-arrow-right contact__button-icon"></i>
-                            </span>
-                        </div>
-                        <div class="contact__card">
-                            <i class="uil uil-linkedin-alt contact__icon"></i>
-                            <h3 class="contect__card-title">Linkedin</h3>
-                            <span class="contact__card-data">user#linkedin.com</span>
-                            <span class="contact__button">
-                                Contactame
-                                <i class="uil uil-arrow-right contact__button-icon"></i>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                -->
-                <div class="contact__content">
-                    <form action="https://formsubmit.co/jmarser.dev@gmail.com" method="POST" class="contact__form">
-                        <div class="input__container">
-                            <input type="text" name="nombre" class="input" required="required">
-                            <label for="nombre">Nombre</label>
-                            <span>nombre</span>
-                        </div>
-                        <div class="input__container">
-                            <input type="email" name="email" class="input" required="required">
-                            <label for="email">Email</label>
-                            <span>email</span>
-                        </div>
-                        <div class="input__container">
-                            <input type="tel" name="telefono" class="input">
-                            <label for="telefono">Telefono</label>
-                            <span>telefono</span>
-                        </div>
-                        <div class="input__container">
-                            <input type="text" name="asunto" class="input" required="required">
-                            <label for="asunto">Asunto</label>
-                            <span>asunto</span>
-                        </div>
-                        <div class="input__container textarea">
-                            <textarea name="mensaje" id="" class="input" required="required"></textarea>
-                            <label for="mensaje">Mensaje</label>
-                            <span>mensaje</span>
-                        </div>
-                        <button type="submit" class="button">
-                            Enviar Mensaje<i class='bx bx-send button__icon'></i>
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </section>
-        <!--**************************** END CONTACT ***************************-->
-        <!--****************************** FOOTER ******************************-->
-        <footer class="footer">
-            <div class="footer__bg">
-                <div class="footer__container container grid">
-                    <div class="footer__info">
-                        <h1 class="footer__title">Juan Márquez</h1>
-                        <span class="footer__subtitle">Desarrollador Font-end / Back-end / Android</span>
-                    </div>
-                    <ul class="footer__links">
-                        <li><a href="#services" class="footer__link">Servicios</a></li>
-                        <li><a href="#portfolio" class="footer__link">Portafolio</a></li>
-                        <li><a href="#contact" class="footer__link">Contacto</a></li>
+            <div class="about__content">
+                <h4 class="section__header">Me presento...</h4>
+                <p class="section__description parrafo1">
+                    Soy desarrollador de aplicaciones móviles y web con más de 2 años de experiencia. Me considero una persona metódica, constante y asertiva, con una sólida capacidad de adaptación y planificación en la ejecución de tareas técnicas. 
+                </p>
+                <p class="section__description parrafo2">
+                    Mi experiencia trabajando en equipos multidisciplinares ha fortalecido mi capacidad para colaborar eficazmente, adaptarme a nuevos desafíos y contribuir al éxito de proyectos innovadores, además de mejorar mis habilidades técnicas, el uso de nuevos frameworks y metodologías ágiles, siempre enfocado en mejorar la calidad del código y la experiencia del usuario.
+                </p>
+                <p class="section__description parrafo3">
+                    Mi enfoque es siempre aprender y aplicar nuevas herramientas que impulsen mi crecimiento profesional y el de los equipos con los que trabajo.
+                </p>
+                <div class="skill__container">
+                    <h2>Experiencia con</h2>
+                    <ul class="skill__flex">
+                        <li><img class="img__skill" src="img/logos/android.png" alt="android"></li>
+                        <li><img class="img__skill" src="img/logos/java.png" alt="java"></li>
+                        <li><img class="img__skill" src="img/logos/Kotlin.png" alt="kotlin"></li>
+                        <li><img class="img__skill" src="img/logos/jetpack compose.png" alt="compose"></li>
+                        <li><img class="img__skill" src="img/logos/Sqlite.png" alt="sqlite"></li>
+                        <li><img class="img__skill" src="img/logos/firebase.png" alt="firebase"></li>
+                        <li><img class="img__skill" src="img/logos/Git.png" alt="git"></li>
+                        <li><img class="img__skill" src="img/logos/GitHub.png" alt="github"></li>
+                        <li><img class="img__skill" src="img/logos/gitLab.png" alt="gitlab"></li>
+                        <li><img class="img__skill" src="img/logos/swift.png" alt="swift"></li>
+                        <li><img class="img__skill" src="img/logos/swiftui.png" alt="swiftui"></li>
+                        <li><img class="img__skill" src="img/logos/html5.png" alt="html5"></li>
+                        <li><img class="img__skill" src="img/logos/css.png" alt="css"></li>
+                        <li><img class="img__skill" src="img/logos/javascript.png" alt="javascript"></li>
+                        <li><img class="img__skill" src="img/logos/php.png" alt="php"></li>
+                        <li><img class="img__skill" src="img/logos/Jquery.png" alt="jquery"></li>
+                        <li><img class="img__skill" src="img/logos/Ajax.png" alt="ajax"></li>
+                        <li><img class="img__skill" src="img/logos/trello.png" alt="trello"></li>
+                        <li><img class="img__skill" src="img/logos/jira.png" alt="jira"></li>
+                        <li><img class="img__skill" src="img/logos/MySql.png" alt="mysql"></li>
                     </ul>
-                    <div class="footer__socials">
-                        <a href="https://www.linkedin.com/in/jmarser-dev" rel="noopener noreferrer" class="footer__social" target="_blank">
-                            <i class='bx bxl-linkedin'></i>
-                        </a>
-                        <a href="https://www.instagram.com/jmarser_dev/" rel="noopener noreferrer" class="footer__social" target="_blank">
-                            <i class='bx bxl-instagram'></i>
-                        </a>
-                        <a href="https://github.com/Jmarser" rel="noopener noreferrer" class="footer__social" target="_blank">
-                            <i class='bx bxl-github'></i>
-                        </a>
+                </div>
+            </div>
+        </section>
+
+        <!--************************* Sección servicios *************************-->
+
+        <section class="service" id="service">
+            <div class="section__container service__container">
+                <h2 class="section__header">Qué puedo hacer</h2>
+                <p class="section__description">
+                    Gracias a los años de formación, prácticas personales y experiencia profesional las funciones que puedo desempeñar son varias.
+                </p>
+            </div>
+            <div class="service__grid">
+                
+            <!--************************* Tarjeta de servicio  *************************-->
+                <div class="service__card">
+                    <span><i class="ri-layout-3-line"></i></span>
+                    <div>
+                        <h4>UX/UI</h4>
+                        <p>
+                            Como desarrollador, me especializo en crear interfaces de usuario que no sólo son estéticamente atractivas, sino altamente funcionales y fáciles de usar. Utilizando tecnologías como XML y JetPack Compose, garantizo aplicaciones que se adaptan perfectamente a cualquier dispositivo, brindando una experiencia ágil y fluida para el usuario.
+                        </p>
                     </div>
                 </div>
-                <p class="footer__copy">&#169; Jmarser. Todos los derechos reservados</p>
+            <!--**************************************************-->
+            <div class="service__card">
+                <span><i class="ri-braces-line"></i></span>
+                <div>
+                    <h4>Codificación</h4>
+                    <p>
+                        Desarrollo la lógica de negocio de las aplicaciones utilizando lenguajes robustos como Java y Kotlin. Implemento patrones de diseño como MVC y MVVM para asegurar un código mantenible y escalable. Además, aplico principios de arquitectura limpia, lo que permite una estructura de código sólida y fácilmente extensible.
+                    </p>
+                </div>
+            </div>
+            <div class="service__card">
+                <span><i class="ri-bug-2-line"></i></span>
+                <div>
+                    <h4>Testing</h4>
+                    <p>
+                        Realizo pruebas exhaustivas en todas las fases del desarrollo para garantizar que cada componente funcione correctamnete. Desde pruebas unitarias hasta de integración, mi enfoque en testing asegura que el producto final sea de la más alta calidad, libre de errores y listo para su lanzamiento.
+                    </p>
+                </div>
+            </div>
+            <div class="service__card">
+                <span><i class="ri-firebase-line"></i></span>
+                <div>
+                    <h4>Firebase</h4>
+                    <p>
+                        Integro la plataforma Firebase en las aplicaciones para proporcionar soluciones completas de backend, desde la autenticación de usuarios hasta el alamcenamiento de datos en tiempo real. También implemento notificaciones push para mantener a los usuarios informados y coprometidos, asegurando una experiencia de usuario conectada y fluida.
+                    </p>
+                </div>
+            </div>
+            <div class="service__card">
+                <span><i class="ri-organization-chart"></i></span>
+                <div>
+                    <h4>Conexion a APIs</h4>
+                    <p>
+                        Implemento la conexión de la aplicación con Apis de forma eficiente utilizando Retrofit y Koin, lo que me permite realizar llamadas a red seguras y manejar dependencias de manera óptima. Ésta integración permite que tu aplicación obtenga datos y servicios de manera rápida y confiable, mejorando su funcionallidad y rendimiento.
+                    </p>
+                </div>
+            </div>
+            <div class="service__card">
+                <span><i class="ri-google-play-line"></i></span>
+                <div>
+                    <h4>Publicación en tiendas</h4>
+                    <p>
+                        Una vez que la aplicación está terminada, me encargo de todo el proceso de publicación en la tienda Play Store. Esto incluye la preparación de la tienda, la optimización de la ficha de la aplicación y el cumplimiento con todas las políticas de Google, asegurando que la app esté disponible para millones de usuarios de forma eficiente.
+                    </p>
+                </div>
+            </div>
+            <div class="service__card">
+                <span><i class="ri-database-2-line"></i></span>
+                <div>
+                    <h4>Bases de datos locales</h4>
+                    <p>
+                        Desarrollo soluciones de alamacenamiento local para que las aplicaciones puedan operar offline de manera eficiente. Utilizo bases de datos como SqLite o Room para asegurar que los datos están organizados y accesibles de manera rápida, lo que mejora la experiencia de usuario.
+                    </p>
+                </div>
+            </div>
+            </div>
+        </section>
+
+
+        <!--************************* Sección resume *************************-->
+
+        <section class="section__container resume__container" id="resume">
+            <h2 class="section__header">Mis cualificaciones</h2>
+            <p class="section__description">
+                Combinación de mi pasión por continuar estudiando, mis estudios, realización de proyectos propios y lo aprendido durante mi experiencia profesional
+            </p>
+            <div class="resume__tabs">
+                <div class="resume__tablist">
+                    <button class="btn active" data-tab="1">Estudios</button>
+                    <button class="btn" data-tab="2">Experiencia</button>
+                </div>
+                <div class="resume__tabpanel">
+                    <!-- Panel para la seleccion -->
+                    <div class="panel__grid active" data-panel="1">
+                        <!-- Tarjeta estudios -->
+                        <div class="panel__card">
+                            <span><i class="ri-graduation-cap-line"></i></span>
+                            <h4>Desarrollo de aplicaciones web</h4>
+                            <p class="section__description"></p>
+                            <p class="section__description"></p>
+                        </div>
+                        <!--*****************-->
+                        <div class="panel__card">
+                            <span><i class="ri-graduation-cap-line"></i></span>
+                            <h4>Desarrollo de aplicaciones multiplataforma</h4>
+                            <p class="section__description"></p>
+                            <p class="section__description"></p>
+                        </div>
+                        <div class="panel__card">
+                            <span><i class="ri-file-marked-line"></i></span>
+                            <h4>Curso de aplicaciones móviles</h4>
+                            <p class="section__description"></p>
+                            <p class="section__description"></p>
+                        </div>
+                        <div class="panel__card">
+                            <span><i class="ri-file-marked-line"></i></span>
+                            <h4>Curso de ciberseguridad</h4>
+                            <p class="section__description"></p>
+                            <p class="section__description"></p>
+                        </div>
+                        <div class="panel__card">
+                            <span><i class="ri-file-marked-line"></i></span>
+                            <h4>Curso de ciberseguridad</h4>
+                            <p class="section__description"></p>
+                            <p class="section__description"></p>
+                        </div>
+                    </div>
+                    <!--************************-->
+                    <div class="panel__grid" data-panel="2">
+                        <!-- Tarjeta estudios -->
+                        <div class="panel__card">
+                            <span><i class="ri-pencil-ruler-2-line"></i></span>
+                            <h4>Desarrollador de aplicaciones android e iOS</h4>
+                            <p class="section__description"><span><i class="ri-calendar-line"></i></span>2024</p>
+                            <p class="section__description"></p>
+                            <p class="section__description"></p>
+                        </div>
+                        <!--*****************-->
+                        <div class="panel__card">
+                            <span><i class="ri-pencil-ruler-2-line"></i></span>
+                            <h4>Desarrollo de páginas web</h4>
+                            <p class="section__description"></p>
+                            <p class="section__description"></p>
+                        </div>
+                        <div class="panel__card">
+                            <span><i class="ri-pencil-ruler-2-line"></i></span>
+                            <h4>Desarrollo de aplicaciones android</h4>
+                            <p class="section__description"></p>
+                            <p class="section__description"></p>
+                        </div>
+                        <div class="panel__card">
+                            <span><i class="ri-pencil-ruler-2-line"></i></span>
+                            <h4>Curso de ciberseguridad</h4>
+                            <p class="section__description"></p>
+                            <p class="section__description"></p>
+                        </div>
+                        <div class="panel__card">
+                            <span><i class="ri-pencil-ruler-2-line"></i></span>
+                            <h4>Curso de ciberseguridad</h4>
+                            <p class="section__description"></p>
+                            <p class="section__description"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!--************************* Sección banner *************************-->
+
+        <section class="banner">
+            <div class="section__container banner__container">
+                <div class="banner__card">
+                    <h4>2+</h4>
+                    <p>Años de experiencia</p>
+                </div>
+                <div class="banner__card">
+                    <h4>20+</h4>
+                    <p>Proyectos desarrollados</p>
+                </div>
+                <div class="banner__card">
+                    <h4>3</h4>
+                    <p>Premios concedidos</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!--************************* Sección client *************************-->
+
+        <section class="client">
+            <div class="section__container client__container">
+                <h2 class="section__header">Clientes</h2>
+                <p class="section__description">
+                    Impresiones de algunos de mis clientes
+                </p>
+                
+                <!-- Slider main container -->
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <div class="client__card">
+                            <p>
+                                Frase alentadora dada por el cliente
+                            </p>
+                            <h4>
+                                Juan márquez
+                            </h4>
+                            <h5>
+                                CEO, Morpheus Inc.
+                            </h5>
+                            <img src="img/profile-1.jpeg" alt="cliente1">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="client__card">
+                            <p>
+                                Frase alentadora dada por el cliente
+                            </p>
+                            <h4>
+                                Juan márquez
+                            </h4>
+                            <h5>
+                                CEO, Morpheus Inc.
+                            </h5>
+                            <img src="img/profile-2.jpeg" alt="cliente1">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="client__card">
+                            <p>
+                                Frase alentadora dada por el cliente
+                            </p>
+                            <h4>
+                                Juan márquez
+                            </h4>
+                            <h5>
+                                CEO, Morpheus Inc.
+                            </h5>
+                            <img src="img/profile-3.jpeg" alt="cliente1">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="client__card">
+                            <p>
+                                Frase alentadora dada por el cliente
+                            </p>
+                            <h4>
+                                Juan márquez
+                            </h4>
+                            <h5>
+                                CEO, Morpheus Inc.
+                            </h5>
+                            <img src="img/profile-4.jpeg" alt="cliente1">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="client__card">
+                            <p>
+                                Frase alentadora dada por el cliente
+                            </p>
+                            <h4>
+                                Juan márquez
+                            </h4>
+                            <h5>
+                                CEO, Morpheus Inc.
+                            </h5>
+                            <img src="img/profile-5.jpeg" alt="cliente1">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--************************* Sección blog *************************-->
+
+        <section class="section__container blog__container" id="blog">
+            <h2 class="section__header">Aportaciones</h2>
+            <div class="blog__grid">
+                <!--***************** Tarjeta blog *****************-->
+                <div class="blog__card">
+                    <img src="img/blog1.jpg" alt="blog1">
+                    <div class="blog__content">
+                        <h4>Una pequeña aportación</h4>
+                        <p class="section__description">
+                            Esta es una pequeña aportación para una solución de un problema.
+                        </p>
+                        <div>
+                            <a href="#">Leer más</a>
+                            <div class="blog__socials">
+                                <a href="#"><i class="ri-twitter-x-line"></i></a>
+                                <a href="#"><i class="ri-linkedin-fill"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--************************************************-->
+                <div class="blog__card">
+                    <img src="img/blog2.jpg" alt="blog1">
+                    <div class="blog__content">
+                        <h4>Una pequeña aportación</h4>
+                        <p class="section__description">
+                            Esta es una pequeña aportación para una solución de un problema.
+                        </p>
+                        <div>
+                            <a href="#">Leer más</a>
+                            <div class="blog__socials">
+                                <a href="#"><i class="ri-twitter-x-line"></i></a>
+                                <a href="#"><i class="ri-linkedin-fill"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="blog__card">
+                    <img src="img/blog3.jpg" alt="blog1">
+                    <div class="blog__content">
+                        <h4>Una pequeña aportación</h4>
+                        <p class="section__description">
+                            Esta es una pequeña aportación para una solución de un problema.
+                        </p>
+                        <div>
+                            <a href="#">Leer más</a>
+                            <div class="blog__socials">
+                                <a href="#"><i class="ri-twitter-x-line"></i></a>
+                                <a href="#"><i class="ri-linkedin-fill"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!--************************* Sección  *************************-->
+
+
+        <!--************************* Sección  *************************-->
+
+
+        <!--************************* Sección footer *************************-->
+        
+        <footer class="footer" id="contact">
+            <div class="section__container footer__container">
+                <h2 class="section__header">¿Hablamos?</h2>
+                <p class="section__description">
+                    Si tienes una idea, yo puedo hacerla realidad
+                </p>
+                <div class="footer__grid">
+                    <div class="footer__content">
+                        <h4>Juan Márquez</h4>
+                        <p>
+                            Si mi trabajo te ha gustado, hablemos para hacer realidad tu idea.
+                        </p>
+                        <p>Gracias por visitarme</p>
+                        <div class="footer__socials">
+                            <a href="#"><i class="ri-twitter-x-line"></i></a>
+                            <a href="#"><i class="ri-linkedin-fill"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer__form">
+                        <form action="/">
+                            <div class="input__row">
+                                <input type="text" name="" id="" placeholder="Tu nombre">
+                                <input type="email" name="" id="" placeholder="Tu email">
+                            </div>
+                            <textarea placeholder="Tu mensaje"></textarea>
+                            <button class="btn btn__primary">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bar">
+                Copyright 2025 Jmarser. Todos los derechos reservados.
             </div>
         </footer>
-        <!--**************************** END FOOTER ****************************-->
-    </main>
-    <!--***************************** END MAIN *****************************-->
-    <!--=****************************** SCROLL UP *****************************=-->
 
-    <!--============================ TYPING EFECT ============================-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
 
-    <!--============================ MIXITUP FILTER ============================-->
-    <script src="./js/mixitup.min.js"></script>
+    <!--================================= MIXITUP ==============================-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"></script>
 
-    <!--=============================== SWIPER JS ==============================-->
-    <script src="js/swiper-bundle.min.js"></script>
+    <!--============================== SCROLLREVEAL ============================-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!--============================== SWIPER ============================-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <!--=============================== SCRIPT JS ==============================-->
     <script src="js/script.js"></script>
