@@ -610,6 +610,105 @@ nav{
     gap: 1rem;
 }
 
+
+
+.project__header .section__header::before{
+    content: "Proyectos";
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+
+.project__header{
+    margin-bottom: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.project__nav{
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.project__btn{
+    color: var(--white);
+    background-image: none;
+    background-color: var(--secondary-color-dark);
+    border: none;
+}
+
+.mixitup-control-active{
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+}
+
+.project__grid{
+    margin-top: 4rem;
+    display: grid;
+    gap: 1rem;
+}
+
+.project__card{
+    padding: 1rem;
+    background-color: var(--secondary-color-dark);
+}
+
+.project__card img{
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    cursor: pointer;
+}
+
+.project__card h4{
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.project__card .section__description{
+    margin-bottom: 2rem;
+}
+
+.project__card > div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.project__card a{
+    color: var(--white);
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+}
+
+.project__card a:hover{
+    color: var(--primary-color);
+}
+
+.project__socials{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
 .footer{
     background-color: var(--secondary-color-dark);
 }
@@ -790,6 +889,9 @@ nav{
     grid-template-columns: repeat(3, 1fr);
 }
 
+.project__grid{
+    grid-template-columns: repeat(3, 1fr);
+}
 
 .footer__grid{
     grid-template-columns: 1fr 2fr;
@@ -804,6 +906,10 @@ nav{
     }
 
     .blog__grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .project__grid{
         grid-template-columns: repeat(2, 1fr);
     }
 }
@@ -825,6 +931,15 @@ nav{
     }
 
     .blog__content{
+        padding: 2rem;
+    }
+
+    .project__grid{
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+    }
+
+    .project__content{
         padding: 2rem;
     }
 }

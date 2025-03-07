@@ -139,6 +139,11 @@ tabList.addEventListener("click", (e) =>{
 
 });
 
+/* SELECTOR PARA PROYECTOS */
+
+const mixer = mixitup(".project__grid")
+
+
 /* SWIPER TESTIMONIOS */
 
 const swiper = new Swiper(".swiper", {
