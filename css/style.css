@@ -188,6 +188,7 @@ nav{
 
 /* Sección home */
 .header{
+    min-height: 100vh;
     padding: .5rem ;
     background-image: linear-gradient(
         rgba(11, 20, 35, .8),
@@ -815,9 +816,10 @@ nav{
 /*= for medium devices =*/
 @media (width > 768px) {
     nav{
-        position: static;
-        padding: 2rem 1rem;
-        max-width: var(--max-width);
+        position: fixed;
+        background-color: var(--secondary-color-dark);
+        padding: 1rem 2rem;
+        max-width: 100%;
         margin-inline: auto;
         display: flex;
         align-items: center;
