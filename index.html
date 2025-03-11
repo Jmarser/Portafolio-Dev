@@ -31,18 +31,19 @@
                 </div>
             </div>
             <ul class="nav__links" id="nav-links">
-                <li class="link"><a href="#home">Inicio</a></li>
-                <li class="link"><a href="#about">Sobre mí</a></li>
-                <li class="link"><a href="#resume">Recorrido</a></li>
-                <li class="link"><a href="#service">Servicios</a></li>
-                <li class="link"><a href="#portfolio">Portfolio</a></li>
-                <li class="link"><a href="#contact">Contacto</a></li>
+                <li class="link" data-scroll-spy><a href="#home">Inicio</a></li>
+                <li class="link" data-scroll-spy><a href="#about">Sobre mí</a></li>
+                <li class="link" data-scroll-spy><a href="#resume">Recorrido</a></li>
+                <li class="link" data-scroll-spy><a href="#service">Servicios</a></li>
+                <li class="link" data-scroll-spy><a href="#portfolio">Portfolio</a></li>
+                <li class="link" data-scroll-spy><a href="#contact">Contacto</a></li>
             </ul>
         </nav>
 
+    <main>    
         <!--************************* Sección home *************************-->
 
-    <header class="header" id="home">
+    <section class="header" id="home" data-scroll-spy>
         <div class="secction__container header__container">
             <h4>Hola, soy Juan Márquez</h4>
             <h1>Desarrollador android / iOS</h1>
@@ -54,11 +55,11 @@
                 <button class="btn btn__secundary">Conoceme</button>
             </div>
         </div>
-    </header>
+    </section>
 
         <!--************************* Sección  About *************************-->
 
-        <section class="section__container about__container" id="about">
+        <section class="section__container about__container" id="about" data-scroll-spy>
             <div class="about__image">
                 <img class="about__image__web" src="img/desarrollo_movil.svg" alt="movil">
                 <img class="about__image__movil" src="img/app web.svg" alt="web">
@@ -83,6 +84,7 @@
                         <li><img class="img__skill" src="img/logos/jetpack compose.png" alt="compose"></li>
                         <li><img class="img__skill" src="img/logos/Sqlite.png" alt="sqlite"></li>
                         <li><img class="img__skill" src="img/logos/firebase.png" alt="firebase"></li>
+                        <li><img class="img__skill" src="img/logos/postman.png" alt="postman"></li>
                         <li><img class="img__skill" src="img/logos/Git.png" alt="git"></li>
                         <li><img class="img__skill" src="img/logos/GitHub.png" alt="github"></li>
                         <li><img class="img__skill" src="img/logos/gitLab.png" alt="gitlab"></li>
@@ -102,89 +104,9 @@
             </div>
         </section>
 
-        <!--************************* Sección servicios *************************-->
-
-        <section class="service" id="service">
-            <div class="section__container service__container">
-                <h2 class="section__header">Qué puedo hacer</h2>
-                <p class="section__description">
-                    Gracias a los años de formación, prácticas personales y experiencia profesional las funciones que puedo desempeñar son varias.
-                </p>
-            </div>
-            <div class="service__grid">
-                
-            <!--************************* Tarjeta de servicio  *************************-->
-                <div class="service__card">
-                    <span><i class="ri-layout-3-line"></i></span>
-                    <div>
-                        <h4>UX/UI</h4>
-                        <p>
-                            Como desarrollador, me especializo en crear interfaces de usuario que no sólo son estéticamente atractivas, sino altamente funcionales y fáciles de usar. Utilizando tecnologías como XML y JetPack Compose, garantizo aplicaciones que se adaptan perfectamente a cualquier dispositivo, brindando una experiencia ágil y fluida para el usuario.
-                        </p>
-                    </div>
-                </div>
-            <!--**************************************************-->
-            <div class="service__card">
-                <span><i class="ri-braces-line"></i></span>
-                <div>
-                    <h4>Codificación</h4>
-                    <p>
-                        Desarrollo la lógica de negocio de las aplicaciones utilizando lenguajes robustos como Java y Kotlin. Implemento patrones de diseño como MVC y MVVM para asegurar un código mantenible y escalable. Además, aplico principios de arquitectura limpia, lo que permite una estructura de código sólida y fácilmente extensible.
-                    </p>
-                </div>
-            </div>
-            <div class="service__card">
-                <span><i class="ri-bug-2-line"></i></span>
-                <div>
-                    <h4>Testing</h4>
-                    <p>
-                        Realizo pruebas exhaustivas en todas las fases del desarrollo para garantizar que cada componente funcione correctamnete. Desde pruebas unitarias hasta de integración, mi enfoque en testing asegura que el producto final sea de la más alta calidad, libre de errores y listo para su lanzamiento.
-                    </p>
-                </div>
-            </div>
-            <div class="service__card">
-                <span><i class="ri-firebase-line"></i></span>
-                <div>
-                    <h4>Firebase</h4>
-                    <p>
-                        Integro la plataforma Firebase en las aplicaciones para proporcionar soluciones completas de backend, desde la autenticación de usuarios hasta el alamcenamiento de datos en tiempo real. También implemento notificaciones push para mantener a los usuarios informados y coprometidos, asegurando una experiencia de usuario conectada y fluida.
-                    </p>
-                </div>
-            </div>
-            <div class="service__card">
-                <span><i class="ri-organization-chart"></i></span>
-                <div>
-                    <h4>Conexion a APIs</h4>
-                    <p>
-                        Implemento la conexión de la aplicación con Apis de forma eficiente utilizando Retrofit y Koin, lo que me permite realizar llamadas a red seguras y manejar dependencias de manera óptima. Ésta integración permite que tu aplicación obtenga datos y servicios de manera rápida y confiable, mejorando su funcionallidad y rendimiento.
-                    </p>
-                </div>
-            </div>
-            <div class="service__card">
-                <span><i class="ri-google-play-line"></i></span>
-                <div>
-                    <h4>Publicación en tiendas</h4>
-                    <p>
-                        Una vez que la aplicación está terminada, me encargo de todo el proceso de publicación en la tienda Play Store. Esto incluye la preparación de la tienda, la optimización de la ficha de la aplicación y el cumplimiento con todas las políticas de Google, asegurando que la app esté disponible para millones de usuarios de forma eficiente.
-                    </p>
-                </div>
-            </div>
-            <div class="service__card">
-                <span><i class="ri-database-2-line"></i></span>
-                <div>
-                    <h4>Bases de datos locales</h4>
-                    <p>
-                        Desarrollo soluciones de alamacenamiento local para que las aplicaciones puedan operar offline de manera eficiente. Utilizo bases de datos como SqLite o Room para asegurar que los datos están organizados y accesibles de manera rápida, lo que mejora la experiencia de usuario.
-                    </p>
-                </div>
-            </div>
-            </div>
-        </section>
-
-
         <!--************************* Sección resume *************************-->
 
-        <section class="section__container resume__container" id="resume">
+        <section class="section__container resume__container" id="resume" data-scroll-spy>
             <h2 class="section__header">Mis cualificaciones</h2>
             <p class="section__description">
                 Combinación de mi pasión por continuar estudiando, mis estudios, realización de proyectos propios y lo aprendido durante mi experiencia profesional
@@ -270,6 +192,84 @@
             </div>
         </section>
 
+        <!--************************* Sección servicios *************************-->
+
+        <section class="service" id="service" data-scroll-spy>
+            <div class="section__container service__container">
+                <h2 class="section__header">Qué puedo hacer</h2>
+                <p class="section__description">
+                    Gracias a los años de formación, prácticas personales y experiencia profesional las funciones que puedo desempeñar son varias.
+                </p>
+            </div>
+            <div class="service__grid">
+                
+            <!--************************* Tarjeta de servicio  *************************-->
+                <div class="service__card">
+                    <span><i class="ri-layout-3-line"></i></span>
+                    <div>
+                        <h4>UX/UI</h4>
+                        <p>
+                            Como desarrollador, me especializo en crear interfaces de usuario que no sólo son estéticamente atractivas, sino altamente funcionales y fáciles de usar. Utilizando tecnologías como XML y JetPack Compose, garantizo aplicaciones que se adaptan perfectamente a cualquier dispositivo, brindando una experiencia ágil y fluida para el usuario.
+                        </p>
+                    </div>
+                </div>
+            <!--**************************************************-->
+            <div class="service__card">
+                <span><i class="ri-braces-line"></i></span>
+                <div>
+                    <h4>Codificación</h4>
+                    <p>
+                        Desarrollo la lógica de negocio de las aplicaciones utilizando lenguajes robustos como Java y Kotlin. Implemento patrones de diseño como MVC y MVVM para asegurar un código mantenible y escalable. Además, aplico principios de arquitectura limpia, lo que permite una estructura de código sólida y fácilmente extensible.
+                    </p>
+                </div>
+            </div>
+            <div class="service__card">
+                <span><i class="ri-bug-2-line"></i></span>
+                <div>
+                    <h4>Testing</h4>
+                    <p>
+                        Realizo pruebas exhaustivas en todas las fases del desarrollo para garantizar que cada componente funcione correctamnete. Desde pruebas unitarias hasta de integración, mi enfoque en testing asegura que el producto final sea de la más alta calidad, libre de errores y listo para su lanzamiento.
+                    </p>
+                </div>
+            </div>
+            <div class="service__card">
+                <span><i class="ri-firebase-line"></i></span>
+                <div>
+                    <h4>Firebase</h4>
+                    <p>
+                        Integro la plataforma Firebase en las aplicaciones para proporcionar soluciones completas de backend, desde la autenticación de usuarios hasta el alamcenamiento de datos en tiempo real. También implemento notificaciones push para mantener a los usuarios informados y coprometidos, asegurando una experiencia de usuario conectada y fluida.
+                    </p>
+                </div>
+            </div>
+            <div class="service__card">
+                <span><i class="ri-organization-chart"></i></span>
+                <div>
+                    <h4>Conexion a APIs</h4>
+                    <p>
+                        Implemento la conexión de la aplicación con Apis de forma eficiente utilizando Retrofit y Koin, lo que me permite realizar llamadas a red seguras y manejar dependencias de manera óptima. Ésta integración permite que tu aplicación obtenga datos y servicios de manera rápida y confiable, mejorando su funcionallidad y rendimiento.
+                    </p>
+                </div>
+            </div>
+            <div class="service__card">
+                <span><i class="ri-google-play-line"></i></span>
+                <div>
+                    <h4>Publicación en tiendas</h4>
+                    <p>
+                        Una vez que la aplicación está terminada, me encargo de todo el proceso de publicación en la tienda Play Store. Esto incluye la preparación de la tienda, la optimización de la ficha de la aplicación y el cumplimiento con todas las políticas de Google, asegurando que la app esté disponible para millones de usuarios de forma eficiente.
+                    </p>
+                </div>
+            </div>
+            <div class="service__card">
+                <span><i class="ri-database-2-line"></i></span>
+                <div>
+                    <h4>Bases de datos locales</h4>
+                    <p>
+                        Desarrollo soluciones de alamacenamiento local para que las aplicaciones puedan operar offline de manera eficiente. Utilizo bases de datos como SqLite o Room para asegurar que los datos están organizados y accesibles de manera rápida, lo que mejora la experiencia de usuario.
+                    </p>
+                </div>
+            </div>
+            </div>
+        </section>
 
         <!--************************* Sección banner *************************-->
 
@@ -440,7 +440,7 @@
 
         <!--************************* Sección Project *************************-->
 
-        <section class="section__container project__container" id="portfolio">
+        <section class="section__container project__container" id="portfolio" data-scroll-spy>
             <div class="project__header">
                 <div class="section__header">Proyectos realizados</div>
                 <div class="project__nav">
@@ -574,41 +574,42 @@
         </section>
 
 
-        <!--************************* Sección  *************************-->
+        <!--************************* Sección Contacto *************************-->
 
-
-        <!--************************* Sección footer *************************-->
-        
-        <footer class="footer" id="contact">
-            <div class="section__container footer__container">
-                <h2 class="section__header">¿Hablamos?</h2>
-                <p class="section__description">
-                    Si tienes una idea, yo puedo hacerla realidad
-                </p>
-                <div class="footer__grid">
-                    <div class="footer__content">
-                        <h4>Juan Márquez</h4>
-                        <p>
-                            Si mi trabajo te ha gustado, hablemos para hacer realidad tu idea.
-                        </p>
-                        <p>Gracias por visitarme</p>
-                        <div class="footer__socials">
-                            <a href="#"><i class="ri-twitter-x-line"></i></a>
-                            <a href="#"><i class="ri-linkedin-fill"></i></a>
-                        </div>
-                    </div>
-                    <div class="footer__form">
-                        <form action="/">
-                            <div class="input__row">
-                                <input type="text" name="" id="" placeholder="Tu nombre">
-                                <input type="email" name="" id="" placeholder="Tu email">
-                            </div>
-                            <textarea placeholder="Tu mensaje"></textarea>
-                            <button class="btn btn__primary">Enviar</button>
-                        </form>
+        <section class="section__container footer__container" id="contact" data-scroll-spy>
+            <h2 class="section__header">¿Hablamos?</h2>
+            <p class="section__description">
+                Si tienes una idea, yo puedo hacerla realidad
+            </p>
+            <div class="footer__grid">
+                <div class="footer__content">
+                    <h4>Juan Márquez</h4>
+                    <p>
+                        Si mi trabajo te ha gustado, hablemos para hacer realidad tu idea.
+                    </p>
+                    <p>Gracias por visitarme</p>
+                    <div class="footer__socials">
+                        <a href="#"><i class="ri-twitter-x-line"></i></a>
+                        <a href="#"><i class="ri-linkedin-fill"></i></a>
                     </div>
                 </div>
+                <div class="footer__form">
+                    <form action="/">
+                        <div class="input__row">
+                            <input type="text" name="" id="" placeholder="Tu nombre">
+                            <input type="email" name="" id="" placeholder="Tu email">
+                        </div>
+                        <textarea placeholder="Tu mensaje"></textarea>
+                        <button class="btn btn__primary">Enviar</button>
+                    </form>
+                </div>
             </div>
+        </section>
+
+    </main>
+        <!--************************* Sección footer *************************-->
+
+        <footer class="footer">
             <div class="footer__bar">
                 Copyright &#169; 2025 Jmarser. Todos los derechos reservados.
             </div>

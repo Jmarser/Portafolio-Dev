@@ -3,6 +3,7 @@
 :root{
     --primary-color: #fe214f;
     --primary-color-dark: #d4133a;
+    --color-scrollbar: #d4133a8e;
     --secondary-color: #0b1423;
     --secondary-color-light: #0f1221;
     --secondary-color-dark: #091121;
@@ -16,6 +17,25 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+::-webkit-scrollbar{
+    width: .5rem;
+    background-color: var(--color-scrollbar);
+    border-radius: .4rem;
+    -webkit-border-radius: .4rem;
+    -moz-border-radius: .4rem;
+    -ms-border-radius: .4rem;
+    -o-border-radius: .4rem;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: var(--primary-color-dark);
+    border-radius: .4rem;
+    -webkit-border-radius: .4rem;
+    -moz-border-radius: .4rem;
+    -ms-border-radius: .4rem;
+    -o-border-radius: .4rem;
 }
 
 html, body{
@@ -180,6 +200,10 @@ nav{
     -moz-transition: .3s;
     -ms-transition: .3s;
     -o-transition: .3s;
+}
+
+.link--active a{
+    color: var(--primary-color);
 }
 
 .link a:hover{

@@ -25,6 +25,37 @@ downloadCv.addEventListener("click", (e) => {
     aElement.click();
 });
 
+/* Efecto para activar la opción del menú seleccinoada */
+const links = document.querySelectorAll(".link a");
+
+links.forEach(link =>{
+    link.addEventListener("click", () =>{
+        links.forEach(l => l.parentElement.classList.remove("link--active"));
+        link.parentElement.classList.add("link--active");
+    })
+});
+
+/* Efecto para activar la opción del menú que se está viendo */
+
+const $sections = document.querySelectorAll("section[data-scroll-spy]");
+const callback = (entries) => {
+    entries.forEach((entry) => {
+        const id = entry.target.getAttribute("id");
+        if (entry.isIntersecting) {
+            document.querySelector(`.link a[href="#${id}"]`).parentElement.classList.add("link--active");
+        } else {
+            document.querySelector(`.link a[href="#${id}"]`).parentElement.classList.remove("link--active");
+        }
+    });
+};
+
+const observer = new IntersectionObserver(callback, {
+    threshold: [0.4, 0.6],
+});
+
+$sections.forEach((section) => observer.observe(section));
+
+
 /* Efectos scrollreveal */
 const scrollRevealOption = {
     distance: "50px",
