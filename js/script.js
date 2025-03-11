@@ -25,7 +25,7 @@ downloadCv.addEventListener("click", (e) => {
     aElement.click();
 });
 
-/* Efecto para activar la opción del menú seleccinoada */
+/* Efecto para activar la opción del menú seleccionada */
 const links = document.querySelectorAll(".link a");
 
 links.forEach(link =>{
@@ -54,6 +54,25 @@ const observer = new IntersectionObserver(callback, {
 });
 
 $sections.forEach((section) => observer.observe(section));
+
+/* Animar escritura */
+let typed = new Typed(".typing", {
+    strings: [ // Textos que queremos que se muestren.
+        "Desarrollador android / iOS",
+        "Desarrollador web",
+    ],
+    typeSpeed: 75, // Velocidad de escritura.
+    startDelay: 1000, // Tiempo de espera antes de empezar a escribir.
+    backSpeed: 75, // Velocidad de borrado de letra.
+    smartBackspace: false, // Borrado inteligente. Elimina sólo las palabras que no coinciden con la siguiente.
+    shuffle: false, // Desordenar las palabras.
+    backDelay: 1500, // Tiempo de espera antes de borrar las palabras.
+    loop: true, // Escribir en bucle.
+    loopount: false, // Cantidad de veces que se repite el bucle. En este caso infinito
+    showCursor: true, // Mostrar cursor.
+    cursorChar: "|", // Carácter del cursor.
+    autoInsertCss: true, // Insertar CSS para el cursor.
+});
 
 
 /* Efectos scrollreveal */
@@ -93,6 +112,11 @@ ScrollReveal().reveal(".header__container .header__btns", {
     ...scrollRevealOption,
     delay: 1500,
 });
+
+ScrollReveal().reveal(".header__container .social__btns", {
+    ...scrollRevealOption,
+    delay: 2000,
+})
 
 ScrollReveal().reveal(".about__image__web", {
     ...scrollRevealOptionWeb,

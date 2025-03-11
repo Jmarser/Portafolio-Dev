@@ -46,13 +46,24 @@
     <section class="header" id="home" data-scroll-spy>
         <div class="secction__container header__container">
             <h4>Hola, soy Juan Márquez</h4>
-            <h1>Desarrollador android / iOS</h1>
+            <h1><span class="typing"></span></h1>
             <p class="section__description">
                 Desarrollador de aplicaciones, transformo ideas en aplicaciones intuitivas, adaptables y de calidad, utilizando las mejores tecnologías del mercado.
             </p>
+            <!--    
             <div class="header__btns">
                 <button class="btn btn__primary" id="download-cv">Download cv</button>
                 <button class="btn btn__secundary">Conoceme</button>
+            </div>
+            -->
+            <div class="header__btns">
+                <a href="./download/CV Developer 2022.pdf" class="btn btn__primary" id="download-cv" download>Download cv</a>
+                <a href="#about" class="btn btn__secundary" id="scroll-about">Conoceme</a>
+            </div>
+            <div class="social__btns">
+                <a href="#" class="social__link"><i class="ri-twitter-x-line"></i></a>
+                <a href="#" class="social__link"><i class="ri-linkedin-box-fill"></i></a>
+                <a href="#" class="social__link"><i class="ri-github-fill"></i></a>
             </div>
         </div>
     </section>
@@ -615,6 +626,8 @@
             </div>
         </footer>
 
+    <!--============================ TYPING EFECT ============================-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
 
     <!--================================= MIXITUP ==============================-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"></script>
