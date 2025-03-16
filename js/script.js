@@ -74,6 +74,27 @@ let typed = new Typed(".typing", {
     autoInsertCss: true, // Insertar CSS para el cursor.
 });
 
+/* Efecto de aumentar los números */
+document.addEventListener("DOMContentLoaded", function () {
+    const counters = document.querySelectorAll(".count");
+
+    counters.forEach(counter => {
+        const updateCounter = () => {
+            const target = +counter.getAttribute("data-target");
+            const current = +counter.innerText;
+            const increment = target / 10000; // Esto hace que el número aumente suavemente
+
+            if (current < target) {
+                counter.innerText = Math.ceil(current + increment);
+                setTimeout(updateCounter, 100); // Llamamos a la función de nuevo para incrementar
+            } else {
+                counter.innerText = target + "+"; // Asegura que el número llegue al valor exacto
+            }
+        };
+
+        updateCounter(); // Llamamos a la función para iniciar la animación
+    });
+});
 
 /* Efectos scrollreveal */
 const scrollRevealOption = {
@@ -117,6 +138,11 @@ ScrollReveal().reveal(".header__container .social__btns", {
     ...scrollRevealOption,
     delay: 2000,
 })
+
+ScrollReveal().reveal(".header__container .banner", {
+    ...scrollRevealOption,
+    delay:2500,
+});
 
 ScrollReveal().reveal(".about__image__web", {
     ...scrollRevealOptionWeb,
@@ -192,6 +218,31 @@ tabList.addEventListener("click", (e) =>{
         {once : true}
     )
 
+});
+
+/* MOSTRAR / OCULTAR LAS HABILIDADES DE LAS TARJETAS */
+document.querySelectorAll(".habilitis").forEach(item => {
+    item.addEventListener("click", function() {
+      // Seleccionamos el "hability-list" correspondiente a la tarjeta
+        var habilidadList = this.closest('.resume__card').querySelector('.resume__hability');
+
+      // Verificamos si habilidadList existe antes de intentar modificarlo
+        if (habilidadList) {
+        habilidadList.classList.toggle("show");
+    }
+    });
+});
+
+document.querySelectorAll(".close__btn").forEach(btn => {
+    btn.addEventListener("click", function() {
+      // Seleccionamos el "hability-list" correspondiente a la tarjeta y lo ocultamos
+        var habilidadList = this.closest('.resume__card').querySelector('.resume__hability');
+
+      // Verificamos si habilidadList existe antes de intentar modificarlo
+        if (habilidadList) {
+        habilidadList.classList.remove("show");
+    }
+    });
 });
 
 /* SELECTOR PARA PROYECTOS */
