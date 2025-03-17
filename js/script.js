@@ -253,20 +253,62 @@ const mixer = mixitup(".project__grid")
 /* SWIPER TESTIMONIOS */
 
 const swiper = new Swiper(".swiper", {
+    grabCursor: true,
     slidesPerview: "auto",
     spaceBetween: 30,
     loop: true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    breakpoints:{
+        540:{
+            slidesPerView: 1,
+            spaceBetween: 20,
+        },
+        768:{
+            slidesPerView: 2,
+            spaceBetween: 40,
+        },
+        1024:{
+            slidesPerView: 3,
+            spaceBetween: 50,
+        },
+    }
 });
 
 
+/* CONFIRMAR ENVÍO DE CORREO */
+document.getElementById("contact-form").onsubmit = function(e){
+    e.preventDefault();
+    var form = e.target;
+        
+        // Validamos que el mensaje tenga un mínimo de longitud
+        var message = form.querySelector('textarea[name="mensaje"]').value;
+        if (message.length < 20) {
+            alert("Por favor, escribe un mensaje más largo.");
+            return;
+        }
 
-
-
-
-
-/* FILTRO PROYECTOS */
-
-
+        // Deshabilitar el botón de envía para evitar dobles envíos
+        var submitButton = form.querySelector('button[type="submit"]');
+        submitButton.disabled = true;
+        
+    fetch(form.action, {
+        method: form.method,
+        body: new FormData(form),
+    }).then(function(response) {
+        submitButton.disabled = false; // Habilitar el botón de envío
+        if (response.ok) {
+            document.getElementById('successMessage').style.display = 'block';
+            form.reset(); // Resetea el formulario
+        } else {
+            alert("Hubo un error al enviar tu mensaje.");
+        }
+    }).catch(function() {
+        alert("Hubo un error al enviar tu mensaje.");
+    });
+};
 
 
 
