@@ -52,7 +52,7 @@
             <li class="link" data-scroll-spy><a href="#resume">Recorrido</a></li>
             <li class="link" data-scroll-spy><a href="#service">Servicios</a></li>
             <li class="link" data-scroll-spy><a href="#portfolio">Portfolio</a></li>
-            <!-- <li class="link" data-scroll-spy><a href="#blog">Blog</a></li> -->
+            <li class="link" data-scroll-spy><a href="#blog">Blog</a></li> 
             <li class="link" data-scroll-spy><a href="#contact">Contacto</a></li>
         </ul>
     </nav>
@@ -71,9 +71,8 @@
                 <a href="#about" class="btn btn__secundary" id="scroll-about">Conoceme</a>
             </div>
             <div class="social__btns">
-                <a href="#" class="social__link"><i class="ri-twitter-x-line"></i></a>
-                <a href="#" class="social__link"><i class="ri-linkedin-box-fill"></i></a>
-                <a href="#" class="social__link"><i class="ri-github-fill"></i></a>
+                <a href="https://www.linkedin.com/in/jmarser-dev" rel="noopener noreferrer" target="_blank" class="social__link"><i class="ri-linkedin-box-fill" title="linkedin"></i></a>
+                <a href="https://github.com/Jmarser" rel="noopener noreferrer" target="_blank" class="social__link"><i class="ri-github-fill" title="Github"></i></a>
             </div>
             <div class="banner">
                 <div class="banner__container">
@@ -84,6 +83,10 @@
                     <div class="banner__card">
                         <h4>Proyectos</h4>
                         <h5 class="count" data-target="20">0</h5>
+                    </div>
+                    <div class="banner__card">
+                        <h4>Artículos</h4>
+                        <h5 class="count" data-target="1">0</h5>
                     </div>
                 </div>
             </div>
@@ -218,7 +221,7 @@
         <div class="section__header">
             <h2 class="section__title" data-heading="Mis cualificaciones">Mí recorrido</h2>
             <p class="section__subtitle">
-                Te detallo los diferentes estudios que he realizado y mi experiencia laboral en el desarrollo de aplicaciones móviles y web, para que puedas conocer mi formación y habilidades en el ámbito del desarrollo de software.
+                A continuación, te presento los estudios que he cursado y mi experiencia profesional en el desarrollo de aplicaciones móviles y web, para que puedas conocer mi formación y habilidades en el ámbito del desarrollo de software.
             </p>
         </div>
         <div class="resume__tabs">
@@ -450,7 +453,7 @@
         <div class="section__header">
             <h2 class="section__title" data-heading="¿Qué puedo aportar?">Servicios</h2>
             <p class="section__subtitle">
-                Te muestro los servicios que ofrezco como desarrollador de aplicaciones móviles y web, para que puedas tener una idea de cómo puedo ayudarte a llevar tu proyecto al siguiente nivel.
+                Descubre los servicios que ofrezco como desarrollador especializado en aplicaciones móviles y web, diseñados para llevar tu proyecto al siguiente nivel con soluciones innovadoras, eficientes y adaptadas a tus necesidades.
             </p>
         </div>
         <div class="service__container">
@@ -473,6 +476,17 @@
                     </p>
                 </div>
             </div>
+            <!--
+            <div class="service__card">
+                <span><i class="ri-node-tree"></i></span>
+                <div class="card__info">
+                    <h4>Desarrollo de aplicaciones monolíticas y modulares</h4>
+                    <p>
+                        Ya sea que necesites una estructura monolítica para un proyecto más sencillo y directo, o una estructura modular para facilitar el mantenimiento y escalabilidad a largo plazo, tengo la experiencia para desarrollar aplicaciones que se ajusten a tus necesidades. Utilizando las mejores prácticas y tecnologías actuales, garantizo que cada solución sea eficiente, flexible y fácil de gestionar.
+                    </p>
+                </div>
+            </div>
+            -->
             <!-- Tarjeta oculta
             <div class="service__card">
                 <span><i class="ri-bug-2-line"></i></span>
@@ -631,7 +645,7 @@
         <div class="section__header">
             <h2 class="section__title" data-heading="Algunos trabajos">Portfolio</h2>
             <p class="section__subtitle">
-                Te presento algunos de mis trabajos más destacados, tanto profesionales como propios, donde podrás ver las habilidades y tecnologías que he utilizado en cada proyecto.
+                Te presento una selección de mis proyectos más destacados, tanto profesionales como personales, donde podrás explorar las habilidades y tecnologías que he utilizado para llevar a cabo cada uno de ellos.
             </p>
         </div>
         <div class="project__container">
@@ -1089,97 +1103,127 @@ Por ello, el fin principal de la Organización es el de servir de órgano de uni
         </div>
     </section>
         <!--***************************************** Section blog *****************************************-->
-        <!-- Seccion oculta 
+        
         <section class="section" id="blog" data-scroll-spy>
             <div class="section__header">
                 <h2 class="section__title" data-heading="Blog">Mí blog</h2>
                 <p class="section__subtitle">
-                    Aquí encontrarás algunas problemáticas encontradas, durante el desarrollo de alguna feature, y las soluciones que he implementado para resolverlas.
+                    En esta sección, comparto desafíos técnicos encontrados durante el desarrollo de funcionalidades y las soluciones implementadas para abordarlos.
                 </p>
             </div>
             <div class="blog__container">
                 
-                
                 <div class="blog__card">
-                    <img src="img/blog1.jpg" alt="Blog">
+                    <img src="img/img_blogs/blog_programar.webp" alt="Blog">
                     <div class="blog__info">
-                        <h4 class="blog__title">Una pequeña aportación</h4>
-                        <p class="blog__description">
-                            Esta es una pequeña aportación para una solución de un problema.
-                        </p>
+                        <h4 class="blog__title">Registros personalizados en LogCat</h4>
+                        <div class="blog__text-container">
+                            <p class="blog__description">
+                                Durante el desarrollo de aplicaciones Android, los registros en LogCat son esenciales para la depuración, pero pueden consumir recursos innecesarios en producción. La eliminación manual de estos logs antes de compilar una versión final es un proceso tedioso y propenso a errores. Para solucionar esto, se propone una clase personalizada de gestión de registros que activa o desactiva los logs automáticamente según el entorno de ejecución.
+                            </p>
+                            <p class="blog__description">
+                                Para implementar esta solución, es necesario modificar el archivo build.gradle, habilitando BuildConfig.java y definiendo distintos tipos de compilación (debug, release y preProduction). Mediante la instrucción buildConfigField, se crea una constante que permite controlar la visibilidad de los registros de manera dinámica, asegurando que solo se muestren en entornos de desarrollo y pruebas.
+                            </p>
+                            <p class="blog__description">
+                                Esta estrategia optimiza el rendimiento de la aplicación al evitar la ejecución innecesaria de logs en producción. Además, facilita la depuración sin necesidad de realizar cambios manuales antes de cada compilación, mejorando la eficiencia y el mantenimiento del código.
+                            </p>
+                        </div>
                         <div class="blog__links">
                             <p>Leer más</p>
                             <div class="project__links">
-                                <a href="#" class="social__link" title="A la tienda"><i class="ri-google-play-line"></i></a>
-                                <a href="https://jmarser.github.io/Portafolio-Dev/" rel="noopener noreferrer" target="_blank" class="social__link"><i class="ri-mac-line"></i></a>
-                                <a href="https://github.com/Jmarser/Portafolio-Dev" rel="noopener noreferrer" target="_blank" class="social__link"><i class="ri-github-fill"></i></a>
+                                <a href="blog_posts/blog_01.html" rel="noopener noreferrer" target="_blank" class="social__link" title="Artículo"><i class="ri-article-line"></i></a>
+                                <a href="https://jmarser.github.io/Portafolio-Dev/" rel="noopener noreferrer" target="_blank" class="social__link" title="Artículo linkedin"><i class="ri-linkedin-box-line"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
-                
+
+                <!--
                 <div class="blog__card">
-                    <img src="img/blog1.jpg" alt="Blog">
+                    <img src="img/img_blogs/blog_programar.webp" alt="Blog">
                     <div class="blog__info">
-                        <h4 class="blog__title">Una pequeña aportación</h4>
-                        <p class="blog__description">
-                            Esta es una pequeña aportación para una solución de un problema.
-                        </p>
-                        <div class="blog__links">
-                            <p>Leer más</p>
-                            <div class="project__links">
-                                <a href="#" class="social__link" title="A la tienda"><i class="ri-google-play-line"></i></a>
-                                <a href="https://jmarser.github.io/Portafolio-Dev/" rel="noopener noreferrer" target="_blank" class="social__link"><i class="ri-mac-line"></i></a>
-                                <a href="https://github.com/Jmarser/Portafolio-Dev" rel="noopener noreferrer" target="_blank" class="social__link"><i class="ri-github-fill"></i></a>
-                            </div>
+                        <h4 class="blog__title">Registros personalizados en LogCat</h4>
+                        <div class="blog__text-container">
+                            <p class="blog__description">
+                                Durante el desarrollo de aplicaciones Android, los registros en LogCat son esenciales para la depuración, pero pueden consumir recursos innecesarios en producción. La eliminación manual de estos logs antes de compilar una versión final es un proceso tedioso y propenso a errores. Para solucionar esto, se propone una clase personalizada de gestión de registros que activa o desactiva los logs automáticamente según el entorno de ejecución.
+                            </p>
+                            <p class="blog__description">
+                                Para implementar esta solución, es necesario modificar el archivo build.gradle, habilitando BuildConfig.java y definiendo distintos tipos de compilación (debug, release y preProduction). Mediante la instrucción buildConfigField, se crea una constante que permite controlar la visibilidad de los registros de manera dinámica, asegurando que solo se muestren en entornos de desarrollo y pruebas.
+                            </p>
+                            <p class="blog__description">
+                                Esta estrategia optimiza el rendimiento de la aplicación al evitar la ejecución innecesaria de logs en producción. Además, facilita la depuración sin necesidad de realizar cambios manuales antes de cada compilación, mejorando la eficiencia y el mantenimiento del código.
+                            </p>
                         </div>
-                    </div>
-                </div>
-                <div class="blog__card">
-                    <img src="img/blog2.jpg" alt="Blog">
-                    <div class="blog__info">
-                        <h4 class="blog__title">Una pequeña aportación</h4>
-                        <p class="blog__description">
-                            Esta es una pequeña aportación para una solución de un problema.
-                        </p>
                         <div class="blog__links">
                             <p>Leer más</p>
                             <div class="project__links">
-                                <a href="#" class="social__link" title="A la tienda"><i class="ri-google-play-line"></i></a>
-                                <a href="https://jmarser.github.io/Portafolio-Dev/" rel="noopener noreferrer" target="_blank" class="social__link"><i class="ri-mac-line"></i></a>
+                                <a href="blog_posts/blog_01.html" class="social__link" title="A la tienda"><i class="ri-article-line"></i></a>
+                                <a href="https://jmarser.github.io/Portafolio-Dev/" rel="noopener noreferrer" target="_blank" class="social__link"><i class="ri-linkedin-box-line"></i></a>
                                 <a href="https://github.com/Jmarser/Portafolio-Dev" rel="noopener noreferrer" target="_blank" class="social__link"><i class="ri-github-fill"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="blog__card">
-                    <img src="img/blog3.jpg" alt="Blog">
+                    <img src="img/img_blogs/blog_programar.webp" alt="Blog">
                     <div class="blog__info">
-                        <h4 class="blog__title">Una pequeña aportación</h4>
-                        <p class="blog__description">
-                            Esta es una pequeña aportación para una solución de un problema.
-                        </p>
+                        <h4 class="blog__title">Registros personalizados en LogCat</h4>
+                        <div class="blog__text-container">
+                            <p class="blog__description">
+                                Durante el desarrollo de aplicaciones Android, los registros en LogCat son esenciales para la depuración, pero pueden consumir recursos innecesarios en producción. La eliminación manual de estos logs antes de compilar una versión final es un proceso tedioso y propenso a errores. Para solucionar esto, se propone una clase personalizada de gestión de registros que activa o desactiva los logs automáticamente según el entorno de ejecución.
+                            </p>
+                            <p class="blog__description">
+                                Para implementar esta solución, es necesario modificar el archivo build.gradle, habilitando BuildConfig.java y definiendo distintos tipos de compilación (debug, release y preProduction). Mediante la instrucción buildConfigField, se crea una constante que permite controlar la visibilidad de los registros de manera dinámica, asegurando que solo se muestren en entornos de desarrollo y pruebas.
+                            </p>
+                            <p class="blog__description">
+                                Esta estrategia optimiza el rendimiento de la aplicación al evitar la ejecución innecesaria de logs en producción. Además, facilita la depuración sin necesidad de realizar cambios manuales antes de cada compilación, mejorando la eficiencia y el mantenimiento del código.
+                            </p>
+                        </div>
                         <div class="blog__links">
                             <p>Leer más</p>
                             <div class="project__links">
-                                <a href="#" class="social__link" title="A la tienda"><i class="ri-google-play-line"></i></a>
-                                <a href="https://jmarser.github.io/Portafolio-Dev/" rel="noopener noreferrer" target="_blank" class="social__link"><i class="ri-mac-line"></i></a>
+                                <a href="blog_posts/blog_01.html" class="social__link" title="A la tienda"><i class="ri-article-line"></i></a>
+                                <a href="https://jmarser.github.io/Portafolio-Dev/" rel="noopener noreferrer" target="_blank" class="social__link"><i class="ri-linkedin-box-line"></i></a>
                                 <a href="https://github.com/Jmarser/Portafolio-Dev" rel="noopener noreferrer" target="_blank" class="social__link"><i class="ri-github-fill"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
-                
-    
+                <div class="blog__card">
+                    <img src="img/img_blogs/blog_programar.webp" alt="Blog">
+                    <div class="blog__info">
+                        <h4 class="blog__title">Registros personalizados en LogCat</h4>
+                        <div class="blog__text-container">
+                            <p class="blog__description">
+                                Durante el desarrollo de aplicaciones Android, los registros en LogCat son esenciales para la depuración, pero pueden consumir recursos innecesarios en producción. La eliminación manual de estos logs antes de compilar una versión final es un proceso tedioso y propenso a errores. Para solucionar esto, se propone una clase personalizada de gestión de registros que activa o desactiva los logs automáticamente según el entorno de ejecución.
+                            </p>
+                            <p class="blog__description">
+                                Para implementar esta solución, es necesario modificar el archivo build.gradle, habilitando BuildConfig.java y definiendo distintos tipos de compilación (debug, release y preProduction). Mediante la instrucción buildConfigField, se crea una constante que permite controlar la visibilidad de los registros de manera dinámica, asegurando que solo se muestren en entornos de desarrollo y pruebas.
+                            </p>
+                            <p class="blog__description">
+                                Esta estrategia optimiza el rendimiento de la aplicación al evitar la ejecución innecesaria de logs en producción. Además, facilita la depuración sin necesidad de realizar cambios manuales antes de cada compilación, mejorando la eficiencia y el mantenimiento del código.
+                            </p>
+                        </div>
+                        <div class="blog__links">
+                            <p>Leer más</p>
+                            <div class="project__links">
+                                <a href="blog_posts/blog_01.html" class="social__link" title="A la tienda"><i class="ri-article-line"></i></a>
+                                <a href="https://jmarser.github.io/Portafolio-Dev/" rel="noopener noreferrer" target="_blank" class="social__link"><i class="ri-linkedin-box-line"></i></a>
+                                <a href="https://github.com/Jmarser/Portafolio-Dev" rel="noopener noreferrer" target="_blank" class="social__link"><i class="ri-github-fill"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                -->
             </div>
         </section>
-        -->
+        
     <!--***************************************** Section contact *****************************************-->
     <section class="section" id="contact" data-scroll-spy>
         <div class="section__header">
             <h2 class="section__title" data-heading="¿Hablamos?">Contacto</h2>
             <p class="section__subtitle">
-                Combinación de mi pasión por continuar estudiando, mis estudios, realización de proyectos propios y lo aprendido durante mi experiencia profesional
+                Si tienes un proyecto en mente o deseas explorar cómo puedo ayudarte a llevar tu idea al siguiente nivel, no dudes en ponerte en contacto conmigo. Estoy listo para escuchar tus necesidades y colaborar en soluciones innovadoras que impulsen tu éxito.
             </p>
         </div>
         <div class="contact__container">
@@ -1190,9 +1234,8 @@ Por ello, el fin principal de la Organización es el de servir de órgano de uni
                 </p>
                 <p>Gracias por visitarme</p>
                 <div class="social__btns">
-                    <a href="#" class="social__link"><i class="ri-twitter-x-line"></i></a>
-                    <a href="#" class="social__link"><i class="ri-linkedin-box-fill"></i></a>
-                    <a href="#" class="social__link"><i class="ri-github-fill"></i></a>
+                    <a href="https://www.linkedin.com/in/jmarser-dev" rel="noopener noreferrer" target="_blank" class="social__link"><i class="ri-linkedin-box-fill" title="linkedin"></i></a>
+                    <a href="https://github.com/Jmarser" rel="noopener noreferrer" target="_blank" class="social__link"><i class="ri-github-fill" title="Github"></i></a>
                 </div>
             </div>
             <div class="contact__form">
@@ -1218,20 +1261,20 @@ Por ello, el fin principal de la Organización es el de servir de órgano de uni
     </footer>
 
 
-        <!--============================ TYPING EFECT ============================-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <!--============================ TYPING EFECT ============================-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
 
-        <!--================================= MIXITUP ==============================-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"></script>
+    <!--================================= MIXITUP ==============================-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"></script>
     
-        <!--============================== SCROLLREVEAL ============================-->
-        <script src="https://unpkg.com/scrollreveal"></script>
+    <!--============================== SCROLLREVEAL ============================-->
+    <script src="https://unpkg.com/scrollreveal"></script>
     
-        <!--============================== SWIPER ============================-->
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!--============================== SWIPER ============================-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     
-        <!--=============================== SCRIPT JS ==============================-->
-        <script src="js/script.js"></script>
+    <!--=============================== SCRIPT JS ==============================-->
+    <script src="js/script.js"></script>
 
     
 </body>

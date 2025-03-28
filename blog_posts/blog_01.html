@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jmarser">
+    <link rel="shortcut icon" href="./img/logo_sin.ico" type="image/x-icon">
+    <title>Registros personalizados en LogCat</title>
+    <link rel="stylesheet" href="../css/style_blogs.css">
+
+            
+        <!--============================= remixicons =============================-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+
+</head>
+<body>
+    <div class="blog__header">
+        <h1 class="header__title">Registros personalizados en LogCat</h1>
+        <p class="header__subtitle">Optimización de logs en entornos de desarrollo y producción</p>
+        <div class="img_header">
+            <img src="../img/img_blogs/blog_programar.webp" alt="imagen programador">
+        </div>
+
+    </div>
+    <div class="blog__container">
+        <div class="content__section">
+            <p class="content__paragraph">
+                Durante el desarrollo de una aplicación Android, todos hemos utilizado y seguiremos utilizando los registros (logs) en la consola LogCat, ya que constituyen la forma más sencilla de realizar una depuración básica al visualizar mensajes en la terminal del IDE.
+            </p>
+            <p class="content__paragraph">
+                Si bien esto no es una mala práctica, es importante considerar que estos registros siempre se ejecutan, lo cual resulta útil en entornos de desarrollo. Sin embargo, en producción, estos logs ya no son necesarios y, de hecho, pueden representar un consumo innecesario de recursos del dispositivo.
+            </p>
+        </div>
+
+        <div class="content__section">
+            <h2 class="content__title">
+                1. Problema: Eliminación manual del Logs
+            </h2>
+            <p class="content__paragraph">
+                Una solución común pero poco eficiente es eliminar o comentar manualmente cada uno de los registros antes de generar la versión de producción.
+            </p>
+            <p class="content__paragraph">
+                Posteriormente, al regresar a la fase de desarrollo, se requiere deshacer estos cambios. Este proceso no solo es tedioso, sino que también aumenta el riesgo de errores y omisiones.
+            </p>
+            <p class="content__paragraph">
+                Para evitar este trabajo repetitivo, podemos crear una clase personalizada para la gestión de registros. Esta clase determinará automáticamente si los logs deben mostrarse o no, según el entorno en el que se ejecute la aplicación.
+            </p>
+        </div>
+
+        <div class="content__section">
+            <h2 class="content__title">
+                2. Configuración en el archivo build.gradle
+            </h2>
+            <p class="content__paragraph">
+                Antes de implementar nuestra clase de registros personalizada, debemos realizar algunas modificaciones en el archivo build.gradle de nuestro proyecto.
+            </p>
+            <p class="content__paragraph">
+                Estas modificaciones son:
+            </p>
+            <ul>
+                <li>
+                    Habilitar la clase de configuración.
+                </li>
+                <li>
+                    definir los tipos de compilación.
+                </li>
+            </ul>
+        </div>
+
+        <div class="content__section">
+            <h2 class="content__title">
+                3. Habilitar BuildConfig.java
+            </h2>
+            <div class="content__wrapper">
+                <div class="content__text">
+                    <p class="content__paragraph">
+                        Primeramente, deberemos habilitar la generación automática de la clase BuildConfig por parte del sistema de compilación. Esta clase contiene información de configuración que es útil en el código fuente del proyecto, como valores de configuración específicos del entorno de compilación.
+                    </p>
+                    <p class="content__paragraph">
+                        Para ello debemos añadir al subbloque buildFeatures dentro del bloque android y le añadimos la instrucción “buildConfig = true”.
+                    </p>
+                    <p class="content__paragraph">
+                        Esto no asegura que la clase BuildConfig esté disponible en el código, con lo que podremos acceder a ella en nuestro código cuando nos haga falta.
+                    </p>
+                </div>
+                <div class="content__img">
+                    <img class="img__blog" src="../img/img_blogs/buildFeatures_01.jpg" alt="" onclick="openModal(this)">
+                </div>
+            </div>
+        </div>
+
+        <div class="content__section">
+            <h2 class="content__title">
+                4. Definición del buildTypes
+            </h2>
+            <div class="content__wrapper">
+                <div class="content__img">
+                    <img class="img__blog" src="../img/img_blogs/buildTypes_01.jpg" alt="" onclick="openModal(this)">
+                </div>
+                <div class="content__text">
+                    <p class="content__paragraph">
+                        Posteriormente, debemos definir los tipos de compilación (buildTypes) para incluir tanto la versión de depuración (debug) como la de producción (release).
+                    </p>
+                    <p class="content__paragraph">
+                        Dentro del bloque android, localizamos el subbloque buildTypes y añadimos una nueva configuración, la debug:
+                    </p>
+            
+                    <p class="content__paragraph">
+                        Tras realizar estas modificaciones, sincronizamos, limpiamos y reconstruimos el proyecto.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content__section">
+            <h2 class="content__title">
+                5. Creación de la clase de registro personalizada
+            </h2>
+            <div class="content__wrapper">
+                <div class="content__text">
+                    <p class="content__paragraph">
+                        Ahora podemos proceder a crear nuestra clase de registro. Para ello, implementaremos una clase Singleton que contendrá los métodos necesarios para la gestión de logs:
+                    </p>
+                    <p class="content__paragraph">
+                        Con esta implementación, ya no es necesario eliminar o comentar los registros manualmente antes de generar una versión de producción, ya que nuestra clase MyLog gestionará su visibilidad automáticamente.
+                    </p>
+                </div>
+                <div class="content__img">
+                    <img class="img__blog" src="../img/img_blogs/MyLog_01.jpg" alt="" onclick="openModal(this)">
+                </div>
+            </div>
+        </div>
+
+        <div class="content__section">
+            <h2 class="content__title">
+                6. Implementando una versión "pre-Producción"
+            </h2>
+            <div class="content__wrapper">
+                <div class="content__img">
+                    <img class="img__blog" src="../img/img_blogs/buildTypes_02.jpg" alt="" onclick="openModal(this)">
+                </div>
+                <div class="content__text">
+                    <p class="content__paragraph">
+                        En algunos casos, podemos necesitar una tercera versión, como pre-producción, la cual puede ser utilizada por usuarios seleccionados para probar la aplicación en dispositivos físicos y proporcionar retroalimentación.
+                    </p>
+                    <p class="content__paragraph">
+                        Pero tal y como está configurada nuestra clase ahora mismo, los logs sólo se mostrarán en la versión de debug, para habilitar los logs también en esta nueva versión, realizamos una modificación adicional en build.gradle.
+                    </p>
+                    <p class="content__paragraph">
+                        Primero debemos empezar creando una constante al buildConfig y le estableceremos un valor dependiendo de la versión.
+                    </p>
+                    <p class="content__paragraph">
+                        buildConfigField(Tipo, Nombre, Valor)
+                    </p>
+                    <ul>
+                        <li>
+                            Tipo: especificamos el tipo de nuestra constante (boolean, String, int, etc.)
+                        </li>
+                        <li>
+                            Nombre: el nombre con el que queremos identificar a nuestra constante.
+                        </li>
+                        <li>
+                            Valor: valor que tendrá la constante, en nuestro caso los valores pueden ser "true" o "false".
+                        </li>
+                    </ul>
+                    <p class="content__paragraph">
+                        Nuestro buildType se verá así:
+                    </p>
+                    <p class="content__paragraph">
+                        Al sincronizar el proyecto, se generará automáticamente la clase BuildConfig.java, que contendrá nuestra constante LOG_ENABLED. Dependiendo del tipo de compilación (buildType), su valor será:
+                    </p>
+                    <ul>
+                        <li>
+                            True en debug y preProducción.
+                        </li>
+                        <li>
+                            False en release.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="content__section">
+            <h2 class="content__title">
+                7. Modificando la clase de registro personalizada
+            </h2>
+            <div class="content__wrapper">
+                <div class="content__text">
+                    <p class="content__paragraph">
+                        Ahora solo necesitamos modificar nuestra clase MyLog para que utilice BuildConfig.LOG_ENABLED en lugar de depender de BuildConfig.DEBUG:
+                    </p>
+            
+                    <p class="content__paragraph">
+                        De esta manera, los logs solo se mostrarán en las versiones debug y preProduction, pero estarán desactivados en reléase, asegurando un mejor rendimiento y evitando exponer información de depuración en producción.
+                    </p>
+                </div>
+                <div class="content__img">
+                    <img class="img__blog" src="../img/img_blogs/MyLog_02.jpg" alt="" onclick="openModal(this)">
+                </div>
+            </div>
+        </div>
+        <div class="content__section">
+            <h2 class="content__title">
+                8. Conclusión
+            </h2>
+            <p class="content__paragraph">
+                La implementación de una clase persionalizada para la gestión de logs es una solución eficiente para controlar la visibilidad de los registros sin necesidad de eliminarlos manualmente. Mediante el uso de buildConfigField, podemos habilitar o deshabilitar los logs de manera dinámica según el tipo de compilación, lo que facilita el mantenimiento del código y mejora la eficiencia en el desarrollo.
+            </p>
+            <p class="content__paragraph">
+                Con esta estrategia, garantizamos que los registros de depuración estarán disponibles solo cuando realmente se necesiten, optimizando el rendimiento de la aplicación en producción sin sacrificar la facilidad de depuración en entornos de prueba.
+            </p>
+        </div>
+
+        <div class="content__section">
+            <h2 class="content__title">
+                Agradecimientos
+            </h2>
+            <div class="content__wrapper">
+                <div class="content__text">
+                    <p class="content__paragraph">
+                        Este artículo se basa en el excelente video de YouTube que encontré. Gracias al autor por su gran trabajo y por inspirar este contenido. Aunque el artículo parte de lo visto en el video, presenta una mejora que hace la solución más escalable y adaptable a diferentes necesidades, optimizando la idea original.
+                    </p>
+                </div>
+                <div class="content__img">
+                    <a href="https://www.youtube.com/watch?v=twCPOfZYbjE&t=1260s" rel="noopener noreferrer" target="_blank">
+                        <img class="img__blog" src="https://img.youtube.com/vi/twCPOfZYbjE/0.jpg" alt="video youtube">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer__bar">
+            Copyright &#169; 2025 Jmarser. Todos los derechos reservados.
+        </div>
+        <div class="social__btns">
+            <a href="https://jmarser.github.io/Portafolio-Dev/" rel="noopener noreferrer" target="_blank" class="social__link"><i class="ri-pages-line"></i></a>
+            <a href="https://www.linkedin.com/in/jmarser-dev" rel="noopener noreferrer" target="_blank"  class="social__link"><i class="ri-linkedin-box-fill"></i></a>
+            <a href="https://github.com/Jmarser" rel="noopener noreferrer" target="_blank"  class="social__link"><i class="ri-github-fill"></i></a>
+        </div>
+    </footer>
+<!-- Modal -->
+<div id="myModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modal-img">
+</div>
+
+    <script src="../js/script_blog.js"></script>
+</body>
+</html>
