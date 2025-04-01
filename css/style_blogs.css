@@ -81,7 +81,7 @@ a{
 .content__section{
     width: 100%;
     margin: 0 auto;
-    padding: 1.5rem;
+    padding: 1rem;
 }
 
 .content__wrapper{
@@ -101,6 +101,8 @@ a{
     flex: .6;
     display: flex;
     justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .content__title, .content__paragraph{
@@ -124,7 +126,7 @@ a{
     font-size: 2rem;
     font-weight: 700;
     color: #333;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 /* Modal - Estilo general */

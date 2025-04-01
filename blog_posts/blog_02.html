@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jmarser">
+    <link rel="shortcut icon" href="./img/logo_sin.ico" type="image/x-icon">
+    <title>Personalización de Fuentes en Android Compose</title>
+    <link rel="stylesheet" href="../css/style_blogs.css">
+
+            
+        <!--============================= remixicons =============================-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+
+</head>
+<body>
+    <div class="blog__header">
+        <h1 class="header__title">Personalización de Fuentes en Android Compose</h1>
+        <p class="header__subtitle">Integrar y adaptar fuentes personalizadas para una experiencia visual fluida</p>
+        <div class="img_header">
+            <img src="../img/img_blogs/blog_programar.webp" alt="imagen programador">
+        </div>
+    </div>
+
+    <div class="blog__container">
+
+        <div class="content__section">
+            <p class="content__paragraph">
+                Una de las claves para lograr una interfaz de usuario atractiva y coherente en aplicaciones Android es el uso adecuado de la tipografía. En este artículo, aprenderemos cómo implementar fuentes personalizadas en nuestros proyectos Android utilizando Jetpack Compose. Veremos dos enfoques: uno manual, en el que integraremos las fuentes directamente en el proyecto, y otro utilizando la API de Google Fonts, lo que facilitará la carga y gestión de fuentes desde la nube.
+            </p>
+            <p class="content__paragraph">
+                Además, exploraremos cómo crear tipografías dinámicas, ajustando automáticamente tanto el tamaño del texto como el interlineado, para garantizar que la experiencia del usuario sea óptima en diferentes dispositivos. Ya sea que estés desarrollando para teléfonos móviles, tablets o incluso dispositivos con orientación horizontal o vertical.
+            </p>
+        </div>
+
+        <div class="content__section">
+            <h2 class="content__title">
+                MÉTODO 1: AGREGANDO FUENTES PERSONALIZADAS AL PROYECTO
+            </h2>
+        </div>
+
+        <div class="content__section">
+            <h2 class="content__title">
+                Agregar los archivos de fuentes
+            </h2>
+            <div class="content__wrapper">
+                <div class="content__text">
+                    <p class="content__paragraph">
+                        Para este método, descargamos la fuente que deseemos en formato <strong>.ttf</strong> o <strong>.otf</strong> y la colocamos dentro de la carpeta <strong>res/font/</strong>.
+                    </p>
+                    <p class="content__paragraph">
+                        Si la carpeta <strong>font</strong> no existe, debemos crearla manualmente en <strong>res</strong>, para ello navegamos por la estructura del proyecto para localizar el directorio <strong>res</strong>, hacemos clic derecho y, en el menú contextual que se muestra, seleccionamos <strong>“Nuevo / new”</strong> y, a continuación, <strong>“Directorio de recursos de Android / Android Resource Directory”.
+                    </p>
+                </div>
+                <div class="content__img">
+                    <img class="img__blog" src="../img/img_blogs/img_blog02_01.jpg" alt="" onclick="openModal(this)">
+                </div>
+            </div>
+        </div>
+        <div class="content__section">
+            <div class="content__wrapper">
+                <div class="content__img">
+                    <img class="img__blog" src="../img/img_blogs/img_blog02_02.jpg" alt="" onclick="openModal(this)">
+                </div>
+                <div class="content__text">
+                    <p class="content__paragraph">
+                        Tras esto aparecerá un nuevo cuadro de diálogo para que definamos los detalles del nuevo directorio de recursos. En el apartado <strong>“tipo de recurso / Resource type”</strong> debemos seleccionar <strong>“font / fuente”</strong>, hecho esto se establecerá de forma automática el <strogn>“nombre del directorio / Directory name”</strogn> en <strong>“font”</strong>, lo dejamos así y aceptamos.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="content__section">
+            <div class="content__wrapper">
+                <div class="content__text">
+                    <p class="content__paragraph">
+                        Una vez que ya tenemos nuestro directorio de fuentes establecido correctamente en nuestra carpeta <strong>“res”</strong>, lo siguiente es transferir los archivos de nuestras fuentes a la carpeta.
+                    </p>
+                    <p class="content__paragraph">
+                        Ejemplo de fuentes agregadas:
+                    </p>
+                    <p class="content__paragraph">
+                        Debemos tener en cuenta que el nombre de las fuentes no debe contener mayúsculas, ni guiones medios, ya que el editor no lo permite.
+                    </p>
+                </div>
+                <div class="content__img">
+                    <img class="img__blog" src="../img/img_blogs/img_blog02_03.jpg" alt="" onclick="openModal(this)">
+                </div>
+            </div>
+        </div>
+        <div class="content__section">
+            <h2 class="content__title">
+                Definir la fuente en Type.kt
+            </h2>
+            <div class="content__wrapper">
+                <div class="content__img">
+                    <img class="img__blog" src="../img/img_blogs/img_blog02_04.jpg" alt="" onclick="openModal(this)">
+                </div>
+                <div class="content__text">
+                    <p class="content__paragraph">
+                        Ahora en el paquete <strong>ui.theme</strong>, creamos o modificamos el archivo <strong>Type.kt</strong> para definir la tipografía personalizada. Jetpack Compose nos permite definir una familia tipográfica utilizando la clase <strong>FontFamily</strong>, para ello creamos una variable para identificar nuestra <strong>“fontFamily”</strong> y relacionamos cada uno de nuestros ficheros de fuente personalizada que tiene un peso específico con el <strong>“FontWeight”</strong> que tiene establecido Jetpack compose por defecto.
+                    </p>
+                </div>
+            </div>
+            <div class="content__wrapper">
+                <div class="content__text">
+                    <p class="content__paragraph">
+                        Ahora debemos indicarle a cada tipografía que debe usar la nueva fuente:
+                    </p>
+                    <p class="content__paragraph">
+                        Con esto, ya podemos usar Typography en nuestros componentes de Jetpack Compose.
+                    </p>
+                </div>
+                <div class="content__img">
+                    <img class="img__blog" src="../img/img_blogs/img_blog02_05.jpg" alt="" onclick="openModal(this)">
+                </div>
+            </div>
+        </div>
+
+        <div class="content__section">
+            <h2 class="content__title">
+                Correlación de los pesos tipográficos
+            </h2>
+            <ul>
+                <li>FontWeight.Thin &rarr; FontWeight.W100</li>
+                <li>FontWeight.ExtraLight &rarr; FontWeight.W200</li>
+                <li>FontWeight.Light &rarr; FontWeight.W300</li>
+                <li>FontWeight.Normal / Regular &rarr; FontWeight.W400</li>
+                <li>FontWeight.Medium &rarr; FontWeight.W500</li>
+                <li>FontWeight.SemiBold &rarr; FontWeight.W600</li>
+                <li>FontWeight.Bold &rarr; FontWeight.W700</li>
+                <li>FontWeight.ExtraBold &rarr; FontWeight.W800</li>
+                <li>FontWeight.Black &rarr; FontWeight.W900</li>
+            </ul>
+        </div>
+
+        <div class="content__section">
+            <h2 class="content__title">
+                MÉTODO 2: USANDO GOOGLE FONTS DINÁMICAMENTE
+            </h2>
+        </div>
+        <div class="content__section">
+            <p class="content__paragraph">
+                Si no queremos incluir archivos de fuentes en el proyecto, podemos cargar las fuentes directamente desde Google Fonts utilizando <strong>FontFamilyResolver</strong>. Es importante definir una fuente por defecto en caso de que la API de Google no funcione.
+            </p>
+        </div>
+        <div class="content__section">
+            <h2 class="content__title">
+                Configurando dependencias en libs.versions.toml
+            </h2>
+            <p class="content__paragraph">
+                Para mantener una gestión ordenada de las dependencias, vamos a utilizar el archivo <strong>libs.versions.toml</strong>. para agregar la librería necesaria.
+            </p>
+            <p class="content__paragraph">
+                En el bloque <strong>[versions]</strong>, agregamos la versión de la librería necesaria:
+            </p>
+            <div class="content__img">
+                <img src="../img/img_blogs/img_blog02_06.jpg" alt="" onclick="openModal(this)">
+            </div>
+            <p class="content__paragraph">
+                En el bloque <strong>[libraries]</strong>, agregamos la referencia:
+            </p>
+            <div class="content__img">
+                <img src="../img/img_blogs/img_blog02_07.jpg" alt="" onclick="openModal(this)">
+            </div>
+        </div>
+        <div class="content__section">
+            <h2 class="content__title">
+                Referencia en Build.gradle(module)
+            </h2>
+            <p class="content__paragraph">
+                En el archivo <strong>Build.gradle(module)</strong>, debemos asegurarnos de agregar la dependencia:
+            </p>
+            <div class="content__img">
+                <img src="../img/img_blogs/img_blog02_08.jpg" alt="" onclick="openModal(this)">
+            </div>
+        </div>
+        <div class="content__section">
+            <h2 class="content__title">
+                Configuración de certificados para Google Fonts
+            </h2>
+            <div class="content__wrapper">
+                <div class="content__text">
+                    <p class="content__paragraph">
+                        Google fonts requiere certificados para autenticarse correctamente. Debemos agregar un archivo en <strong>res/values/</strong> llamado <strong>fonts_certs.xml</strong> con el siguiente contenido:
+                    </p>
+                    <p class="content__paragraph">
+                        Esto permitirá que Google Fonts funcione correctamente en nuestra aplicación.
+                    </p>
+                </div>
+                <div class="content__img">
+                    <img class="img__blog" src="../img/img_blogs/img_blog02_09.jpg" alt="" onclick="openModal(this)">
+                </div>
+            </div>
+        </div>
+        <div class="content__section">
+            <h2 class="content__title">
+                Definir la fuente con Google Fonts
+            </h2>
+            <div class="content__wrapper">
+                <div class="content__img">
+                    <img class="img__blog" src="../img/img_blogs/img_blog02_10.jpg" alt="" onclick="openModal(this)">
+                </div>
+                <div class="content__text">
+                    <p class="content__paragraph">
+                        En Type.kt, configuramos la fuente con una alternativa local por si la carga desde internet falla:
+                    </p>
+                    <p class="content__paragraph">
+                        Con esta implementación, la fuente <strong>poppins</strong> se cargará dinámicamente desde Google Fonts. Si hay algún problema con la conexión, se usará la fuente local <strong>roboto.ttf</strong>.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content__section">
+            <h2 class="content__title">
+                TIPOGRAFÍA DINÁMICA SEGÚN DISPOSITIVOS Y ORIENTACIÓN
+            </h2>
+        </div>
+        <div class="content__section">
+            <p class="content__paragraph">
+                Podemos hacer que el tamaño de la tipografía se ajuste según el dispositivo (teléfono o Tablet) y la orientación (vertical u horizontal) usando <strong>LocalConfiguration</strong> en Jetpack Compose.
+            </p>
+        </div>
+        <div class="content__section">
+            <h2 class="content__title">
+                Actualizar Type.kt para tipografía dinámica
+            </h2>
+            <div class="content__wrapper">
+                <div class="content__text">
+                    <p class="content__paragraph">
+                        En el fichero <strong>“Type.kt”</strong> debemos quitar la variable <strong>“Typography”</strong> y crear un composable que hereda de <strong>“Typography”</strong>, en este nuevo composable implementamos las variables que el ancho de pantalla y su alto que posteriormente usaremos para determinar el tamaño de letra y la altura de la línea dependiendo de estas variables.
+                    </p>
+                </div>
+                <div class="content__img">
+                    <img class="img__blog" src="../img/img_blogs/img_blog02_11.jpg" alt="" onclick="openModal(this)">
+                </div>
+            </div>
+        </div>
+        <div class="content__section">
+            <h2 class="content__title">
+                Actualizar Theme.kt para aplicar tipografía dinámica
+            </h2>
+            <div class="content__wrapper">
+                <div class="content__img">
+                    <img class="img__blog" src="../img/img_blogs/img_blog02_12.jpg" alt="" onclick="openModal(this)">
+                </div>
+                <div class="content__text">
+                    <p class="content__paragraph">
+                        Debemos modificar nuestro fichero <strong>“Theme.kt”</strong> para que deje de usar la tipografía estática y utilice la tipografía dinámica, para ello creamos una variable que contendrá el composable que hemos creado en el <strong>“Type.kt”</strong> y la variable de tipografía de nuestro <strong>“MaterialTheme”</strong> lo igualamos a esta nueva variable.
+                    </p>
+                    <p class="content__paragraph">
+                        Con estos cambios, nuestra tipografía ahora se adapta dinámicamente según el tipo de dispositivo y la orientación.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="content__section">
+            <h2 class="content__title">
+                Conclusión
+            </h2>
+            <p class="content__paragraph">
+                Hemos visto dos métodos para implementar fuentes personalizadas en Android con Jetpack Compose. Aprendimos a integrar fuentes locales en el proyecto, a integrar Google Fonts de forma dinámica. Por último, aprendimos a hacer que la tipografía se adapte automáticamente según el tipo de dispositivo y la orientación de la pantalla.
+            </p>
+            <p class="content__paragraph">
+                Con estas técnicas, no solo logramos un diseño más estilizado y coherente, sino que también mejoramos la accesibilidad y la experiencia de usuario en diferentes contextos. Aplicar tipografías de manera dinámica nos permite ofrecer una interfaz más flexible y optimizada para cada dispositivo. Implementación de dimensiones para varios tipos de pantallas.
+            </p>
+        </div>
+
+    </div>
+
+    <footer class="footer">
+        <div class="footer__bar">
+            Copyright &#169; 2025 Jmarser. Todos los derechos reservados.
+        </div>
+        <div class="social__btns">
+            <a href="https://jmarser.github.io/Portafolio-Dev/" rel="noopener noreferrer" target="_blank" class="social__link"><i class="ri-pages-line"></i></a>
+            <a href="https://www.linkedin.com/in/jmarser-dev" rel="noopener noreferrer" target="_blank"  class="social__link"><i class="ri-linkedin-box-fill"></i></a>
+            <a href="https://github.com/Jmarser" rel="noopener noreferrer" target="_blank"  class="social__link"><i class="ri-github-fill"></i></a>
+        </div>
+    </footer>
+<!-- Modal -->
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <script src="../js/script_blog.js"></script>
+</body>
+</html>

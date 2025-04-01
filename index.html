@@ -52,7 +52,7 @@
             <li class="link" data-scroll-spy><a href="#resume">Recorrido</a></li>
             <li class="link" data-scroll-spy><a href="#service">Servicios</a></li>
             <li class="link" data-scroll-spy><a href="#portfolio">Portfolio</a></li>
-            <!-- <li class="link" data-scroll-spy><a href="#blog">Blog</a></li> -->
+            <li class="link" data-scroll-spy><a href="#blog">Blog</a></li> 
             <li class="link" data-scroll-spy><a href="#contact">Contacto</a></li>
         </ul>
     </nav>
@@ -1105,7 +1105,7 @@ Por ello, el fin principal de la Organización es el de servir de órgano de uni
         </div>
     </section>
         <!--***************************************** Section blog *****************************************-->
-        <!--
+        
         <section class="section" id="blog" data-scroll-spy>
             <div class="section__header">
                 <h2 class="section__title" data-heading="Blog">Mí blog</h2>
@@ -1144,28 +1144,26 @@ Por ello, el fin principal de la Organización es el de servir de órgano de uni
                 <div class="blog__card">
                     <img src="img/img_blogs/blog_programar.webp" alt="Blog">
                     <div class="blog__info">
-                        <h4 class="blog__title">Registros personalizados en LogCat</h4>
+                        <h4 class="blog__title">Personalización de Fuentes en Android Compose</h4>
                         <div class="blog__text-container">
                             <p class="blog__description">
-                                Durante el desarrollo de aplicaciones Android, los registros en LogCat son esenciales para la depuración, pero pueden consumir recursos innecesarios en producción. La eliminación manual de estos logs antes de compilar una versión final es un proceso tedioso y propenso a errores. Para solucionar esto, se propone una clase personalizada de gestión de registros que activa o desactiva los logs automáticamente según el entorno de ejecución.
+                                Una de las claves para lograr una interfaz de usuario atractiva y coherente en aplicaciones Android es el uso adecuado de la tipografía. En este artículo, aprenderemos cómo implementar fuentes personalizadas en nuestros proyectos Android utilizando Jetpack Compose. Veremos dos enfoques: uno manual, en el que integraremos las fuentes directamente en el proyecto, y otro utilizando la API de Google Fonts, lo que facilitará la carga y gestión de fuentes desde la nube.
                             </p>
                             <p class="blog__description">
-                                Para implementar esta solución, es necesario modificar el archivo build.gradle, habilitando BuildConfig.java y definiendo distintos tipos de compilación (debug, release y preProduction). Mediante la instrucción buildConfigField, se crea una constante que permite controlar la visibilidad de los registros de manera dinámica, asegurando que solo se muestren en entornos de desarrollo y pruebas.
-                            </p>
-                            <p class="blog__description">
-                                Esta estrategia optimiza el rendimiento de la aplicación al evitar la ejecución innecesaria de logs en producción. Además, facilita la depuración sin necesidad de realizar cambios manuales antes de cada compilación, mejorando la eficiencia y el mantenimiento del código.
+                                Además, exploraremos cómo crear tipografías dinámicas, ajustando automáticamente tanto el tamaño del texto como el interlineado, para garantizar que la experiencia del usuario sea óptima en diferentes dispositivos. Ya sea que estés desarrollando para teléfonos móviles, tablets o incluso dispositivos con orientación horizontal o vertical.
                             </p>
                         </div>
                         <div class="blog__links">
                             <p>Leer más</p>
                             <div class="project__links">
-                                <a href="blog_posts/blog_01.html" class="social__link" title="A la tienda"><i class="ri-article-line"></i></a>
+                                <a href="blog_posts/blog_02.html" rel="noopener noreferrer" target="_blank" class="social__link" title="A la tienda"><i class="ri-article-line"></i></a>
                                 <a href="https://jmarser.github.io/Portafolio-Dev/" rel="noopener noreferrer" target="_blank" class="social__link"><i class="ri-linkedin-box-line"></i></a>
-                                <a href="https://github.com/Jmarser/Portafolio-Dev" rel="noopener noreferrer" target="_blank" class="social__link"><i class="ri-github-fill"></i></a>
+                                <a href="https://github.com/Jmarser/Fonts_dinamic" rel="noopener noreferrer" target="_blank" class="social__link"><i class="ri-github-fill"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!--
                 <div class="blog__card">
                     <img src="img/img_blogs/blog_programar.webp" alt="Blog">
                     <div class="blog__info">
@@ -1216,10 +1214,10 @@ Por ello, el fin principal de la Organización es el de servir de órgano de uni
                         </div>
                     </div>
                 </div>
-                
+                -->
             </div>
         </section>
-        -->
+        
         
     <!--***************************************** Section contact *****************************************-->
     <section class="section" id="contact" data-scroll-spy>
